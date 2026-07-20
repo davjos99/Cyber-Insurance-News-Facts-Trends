@@ -85,7 +85,7 @@ ITEM_LINE_RE = re.compile(r"^[-*]\s+(.+)$")
 def parse_briefing(text: str) -> dict:
     """Extract title, meta, sections from briefing.md."""
     out = {
-        "title": "Cybersec Briefing",
+        "title": "Cybersec Insurance News-Facts-Trends Briefing",
         "window_hours": "24",
         "sources_polled": "?",
         "items_reviewed": "?",

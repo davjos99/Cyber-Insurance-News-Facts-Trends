@@ -5,9 +5,9 @@ name: Morning Cyber Insurance Briefing
 
 on:
   schedule:
-    # 7:30 AM UTC daily — still fine, or adjust if you want a different time
+    # 9:00 PM UTC daily — still fine, or adjust if you want a different time
     # for the insurance-focused briefing.
-    - cron: "30 7 * * *"
+    - cron: "00 21 * * *"
   workflow_dispatch:  # allow manual trigger from the Actions tab
 
 permissions:

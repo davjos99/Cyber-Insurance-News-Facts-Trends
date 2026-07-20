@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersec Briefing — 2026-07-20</title>
+  <style>
+    :root {
+      --bg-dark: #0c0c0e;
+      --bg-card: #15151a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a8a8b0;
+      --accent-cyan: #5adcf0;
+      --accent-yellow: #ffd54f;
+      --accent-green: #82e682;
+      --accent-red: #ff7a7a;
+      --border: #2a2a32;
+    }
+    [data-theme="light"] {
+      --bg-dark: #fafafa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --accent-cyan: #0091ad;
+      --accent-yellow: #b8860b;
+      --accent-green: #228822;
+      --accent-red: #c0392b;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
+    }
+    .container { max-width: 880px; margin: 0 auto; }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .toggle {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+    .toggle:hover { border-color: var(--accent-cyan); }
+    section {
+      background: var(--bg-card);
+      border-left: 4px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    section.threats { border-left-color: var(--accent-red); }
+    section.news { border-left-color: var(--accent-cyan); }
+    section.advice { border-left-color: var(--accent-green); }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    section.threats h2 { color: var(--accent-red); }
+    section.news h2 { color: var(--accent-cyan); }
+    section.advice h2 { color: var(--accent-green); }
+    ul { list-style: none; padding: 0; }
+    li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: none; }
+    li strong {
+      color: var(--text-primary);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    li a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    li a:hover { text-decoration: underline; }
+    li p { color: var(--text-secondary); font-size: 0.95rem; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .no-items {
+      color: var(--text-secondary);
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      h1 { font-size: 1.5rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Cybersec Briefing — 2026-07-20</h1>
+        <div class="meta">Window: last 24 hours &middot; 10 sources polled &middot; 13 items kept</div>
+      </div>
+      <button class="toggle" onclick="toggleTheme()">Light / Dark</button>
+    </header>
+
+    <section class="threats">
+      <h2>Threats</h2>
+      <ul><li><strong>WordPress Exploitation Underway (CVE-2026-63030), (Mon, Jul 20th)</strong><p>Last week, Searchlight Cyber released details about a vulnerability they are calling &quot;wp2shell&quot;. The vulnerability was initially announced without a CVE number. But now has been assigned CVE-2026-63030. Many WordPress plugin vulnerabilities are never assigned CVE numbers. <a href="https://isc.sans.edu/diary/rss/33168" rel="noopener noreferrer" target="_blank">Source: SANS Internet Storm Center</a></p></li><li><strong>Estée Lauder discloses data breach via Oracle E-Business flaw</strong><p>Cosmetics giant Estée Lauder is notifying customers of a data breach after hackers exploited a flaw in Oracle E-Business Suite that the company used for human resources (HR) operations. [...] <a href="https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li><li><strong>SonicWall SMA1000 flaws exploited as zero-days to push custom malware</strong><p>Two recently disclosed SonicWall SMA1000 vulnerabilities were exploited in zero-day attacks for weeks, allowing threat actors to install custom malware on vulnerable VPN appliances. [...] <a href="https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li><li><strong>JadePuffer agentic attacks now target AI model data with ransomware</strong><p>The JadePuffer autonomous AI agent has upgraded with custom malware called EncForge that focuses on encrypting AI assets, such as training datasets, vector databases, and model checkpoints. [...] <a href="https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li><li><strong>⚡ Weekly Recap: WordPress RCE, SonicWall 0-Days, AI Service Attacks, SharePoint 0-Day and More</strong><p>A single request should not be able to do this much. But this week, small inputs led to code execution, memory loss, stolen keys, and disabled security tools. <a href="https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html" rel="noopener noreferrer" target="_blank">Source: The Hacker News</a></p></li></ul>
+    </section>
+
+    <section class="news">
+      <h2>News</h2>
+      <ul><li><strong>On Flock License Plate Tracking Cameras</strong><p>A recent story of a writer who was mistakenly identified, tracked, and arrested using data from Flock cameras has gone viral. The New Jersey plates that were allegedly stolen from the LA dealer were 34 03 DTM, not 34 10 DTM. <a href="https://www.schneier.com/blog/archives/2026/07/on-flock-license-plate-tracking-cameras.html" rel="noopener noreferrer" target="_blank">Source: Schneier on Security</a></p></li><li><strong>Hackers steal $23.7 million in crypto from Ostium in off-chain attack</strong><p>The Ostium trading platform announced that an attacker stole $23.75 million from its liquidity provider vault last week, after compromising off-chain infrastructure used to feed prices into the protocol. [...] <a href="https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li><li><strong>Cursor, Codex, Gemini CLI, Antigravity hit by sandbox escapes</strong><p>Researchers escaped the sandboxes in Cursor, Codex, Gemini CLI and Antigravity by having the AI agent write files that trusted host tools later run. Multiple CVEs, patches, and Google downgrading two Antigravity findings. [...] <a href="https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravity-hit-by-sandbox-escapes/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li><li><strong>FakeGit Campaign Uses 7,600 GitHub Repositories to Spread SmartLoader Malware</strong><p>Cybersecurity researchers have discovered nearly 7,600 malicious GitHub repositories, out of which more than 800 pose as artificial intelligence (AI) skills or Model Context Protocol (MCP) servers to deliver a malware family known as SmartLoader as part of an ongoing campaign cod. <a href="https://thehackernews.com/2026/07/fakegit-campaign-uses-7600-github.html" rel="noopener noreferrer" target="_blank">Source: The Hacker News</a></p></li><li><strong>New HollowGraph malware uses Microsoft Graph for stealthy C2 comms</strong><p>A malicious component dubbed HollowGraph uses the calendar feature in compromised Microsoft 365 mailboxes as a command-and-control channel to receive attacker commands and exfiltrate stolen data. [...] <a href="https://www.bleepingcomputer.com/news/security/new-hollowgraph-malware-uses-microsoft-graph-for-stealthy-c2-comms/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li></ul>
+    </section>
+
+    <section class="advice">
+      <h2>Advice</h2>
+      <ul><li><strong>An AI SOC Evaluation Guide for Security Leaders</strong><p>Choosing an AI SOC platform requires understanding how it will perform in your own environment, not just during an evaluation. <a href="https://www.bleepingcomputer.com/news/security/an-ai-soc-evaluation-guide-for-security-leaders/" rel="noopener noreferrer" target="_blank">Source: Bleeping Computer</a></p></li><li><strong>Attackers Combo Up Evasion Tactics for BEC Phishing</strong><p>&quot;The TFF Trap&quot; uses fileless techniques and loaders with low detection rates to deploy various RATs and stealers, including Agent Tesla, Remcos, XWorm, and Best Private Logger. <a href="https://www.darkreading.com/endpoint-security/attackers-combo-evasion-tactics-bec-phishing" rel="noopener noreferrer" target="_blank">Source: Dark Reading</a></p></li><li><strong>New ACR Stealer campaigns use WebDAV, MSHTA to evade detection</strong><p>Microsoft has issued a warning about a recent surge in ACR Stealer activity that uses ClickFix-style social engineering to steal credentials, browser data, and sensitive business documents. <a href="https://www.csoonline.com/article/4198788/new-acr-stealer-campaigns-use-webdav-mshta-to-evade-detection.html" rel="noopener noreferrer" target="_blank">Source: CSO Online</a></p></li></ul>
+    </section>
+
+    <footer>
+      Generated 2026-07-20T23:08:27 UTC
+      <br><em>Sources that failed this run: US-CERT CISA Alerts</em>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("cybersec-briefing-theme", next);
+    }
+    (function() {
+      const saved = localStorage.getItem("cybersec-briefing-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</body>
+</html>

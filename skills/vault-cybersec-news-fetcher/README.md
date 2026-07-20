@@ -1,4 +1,4 @@
-# Cybersec News Fetcher
+# Cybersec Insurance News-Facts-Trends Fetcher
 
 The first Skill in the morning cybersecurity briefing chain. Pulls RSS feeds from 10-15 trusted cybersec sources, normalizes everything to one JSON shape, dedupes across sources, and hands the output to the categorizer.
 

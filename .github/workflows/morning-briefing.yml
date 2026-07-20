@@ -3,8 +3,6 @@
 # but helps distinguish it from your general cybersec briefing.
 name: Morning Cyber Insurance Briefing
 
-name: Morning Cybersec Briefing
-
 on:
   schedule:
     # 7:30 AM UTC daily — adjust for your timezone (GitHub cron is UTC, no DST)

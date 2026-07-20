@@ -31,50 +31,13 @@ jobs:
           python-version: "3.11"
 
       - name: Run the chain
-        env:
-          # Optional — only set if you're using Notion publisher in this insurance repo.
-          # If you don't need Notion, you can omit these env vars (or leave them;
-          # unused secrets don't break the workflow).
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-          # Optional — only set if you're using WordPress publisher.
-          WP_URL: ${{ secrets.WP_URL }}
-          WP_USER: ${{ secrets.WP_USER }}
-          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
         run: |
           mkdir -p output
-          # KEY CHANGE: Point to a different sources JSON that lists
-          # cybersecurity insurance / cyber risk / cyber underwriting sites.
-          # For the new repo, create:
-          #   skills/cybersec-news-fetcher/assets/templates/cybersec_insurance_sources.json
-          # and populate it with insurance-focused feeds.
-          python skills/cybersec-news-fetcher/scripts/fetch_feeds.py \
-            --sources skills/cybersec-news-fetcher/assets/templates/cybersec_insurance_sources.json \
-            --since 24 \
-            --output output/raw_news.json
-
-          # Dedupe logic can stay identical; it will now operate on
-          # insurance-focused raw news instead of general cybersec.
-          python skills/cybersec-news-fetcher/scripts/dedupe.py \
-            --input output/raw_news.json \
-            --output output/deduped.json
-
-          # Categorizer can still be used, but you may optionally tune it
-          # (e.g., add categories like "Policy", "Claims", "Underwriting", "Regulation").
-          # For now, it will categorize the insurance articles using your existing logic.
-          python skills/news-categorizer/scripts/categorize.py \
-            --input output/deduped.json \
-            --output output/briefing.md
-
-          # Validation step remains the same; it checks structure / formatting of the briefing.
+          python skills/cybersec-news-fetcher/scripts/fetch_feeds.py --sources skills/cybersec-news-fetcher/assets/templates/cybersec_insurance_sources.json --since 24 --output output/raw_news.json
+          python skills/cybersec-news-fetcher/scripts/dedupe.py --input output/raw_news.json --output output/deduped.json
+          python skills/news-categorizer/scripts/categorize.py --input output/deduped.json --output output/briefing.md
           python skills/news-categorizer/scripts/validate_briefing.py output/briefing.md || true
-
-          # Publisher still turns the markdown briefing into a static HTML page.
-          # Inside this script/template, you can adjust title, fonts, and hero image
-          # to say e.g. "Morning Cyber Insurance Briefing".
-          python skills/news-page-publisher/scripts/publish_static_html.py \
-            --input output/briefing.md \
-            --output output/index.html
+          python skills/news-page-publisher/scripts/publish_static_html.py --input output/briefing.md --output output/index.html     
 
       - name: Commit briefing
         run: |

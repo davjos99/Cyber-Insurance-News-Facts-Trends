@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-05-27T08:00:00+00:00",
+  "window_hours": 24,
+  "sources_polled": 5,
+  "sources_succeeded": 5,
+  "sources_failed": [],
+  "items_raw": 5,
+  "items_after_time_filter": 5,
+  "items": [
+    {
+      "title": "Critical CVE-2026-1234 in Apache HTTP Server allows remote code execution",
+      "summary": "A critical vulnerability tracked as CVE-2026-1234 affects Apache HTTP Server versions 2.4.50 through 2.4.59. Exploitation requires no authentication. Apache has released a patch in 2.4.60 and recommends immediate upgrade. Active exploitation observed.",
+      "url": "https://example.com/apache-cve-2026-1234",
+      "published_date": "2026-05-27T04:30:00+00:00",
+      "source_name": "The Hacker News",
+      "raw_age_hours": 3.5
+    },
+    {
+      "title": "Acme Corp breach exposes 4.2M customer records, ransomware group claims responsibility",
+      "summary": "Acme Corp confirmed a data breach affecting 4.2 million customers. The BlackSuit ransomware group has listed the company on its leak site. Stolen data includes names, emails, hashed passwords, and partial credit card numbers. Acme is offering 24 months of credit monitoring.",
+      "url": "https://example.com/acme-breach-may-2026",
+      "published_date": "2026-05-26T22:15:00+00:00",
+      "source_name": "Bleeping Computer",
+      "raw_age_hours": 9.75
+    },
+    {
+      "title": "FBI seizes infrastructure of major info-stealer malware operation",
+      "summary": "The FBI, in coordination with European law enforcement, seized servers belonging to the StealC info-stealer operation. The operation had stolen credentials from over 1.5 million victims globally. Three suspected operators were arrested in Romania and the Netherlands.",
+      "url": "https://example.com/fbi-stealc-takedown",
+      "published_date": "2026-05-26T16:45:00+00:00",
+      "source_name": "KrebsOnSecurity",
+      "raw_age_hours": 15.25
+    },
+    {
+      "title": "Best practices for hardening Kubernetes clusters against supply-chain attacks",
+      "summary": "A practical guide to defending Kubernetes deployments against supply-chain compromises. Covers image signing with Sigstore, admission controllers, network policies, and runtime monitoring. Includes example YAML manifests for each control.",
+      "url": "https://example.com/k8s-supply-chain-hardening",
+      "published_date": "2026-05-27T07:00:00+00:00",
+      "source_name": "SANS Internet Storm Center",
+      "raw_age_hours": 1.0
+    },
+    {
+      "title": "Microsoft May 2026 Patch Tuesday addresses 64 vulnerabilities including 3 zero-days",
+      "summary": "Microsoft released patches for 64 CVEs in May 2026 Patch Tuesday, including three zero-day vulnerabilities under active exploitation. The most critical is CVE-2026-5678 in Windows Kernel allowing local privilege escalation. Administrators should patch within 72 hours.",
+      "url": "https://example.com/ms-patch-tuesday-may-2026",
+      "published_date": "2026-05-27T01:20:00+00:00",
+      "source_name": "Dark Reading",
+      "raw_age_hours": 6.67
+    }
+  ]
+}

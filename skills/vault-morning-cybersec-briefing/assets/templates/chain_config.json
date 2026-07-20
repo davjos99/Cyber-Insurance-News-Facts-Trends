@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "window_hours": 24,
+  "skill_paths": {
+    "fetcher": "~/.claude/skills/vault-cybersec-news-fetcher",
+    "categorizer": "~/.claude/skills/vault-news-categorizer",
+    "publisher": "~/.claude/skills/vault-news-page-publisher"
+  },
+  "work_dir": "~/.cybersec-briefing/runs",
+  "fetcher": {
+    "sources_file": null
+  },
+  "categorizer": {
+    "template": null
+  },
+  "publishers": [
+    {
+      "type": "static_html",
+      "destination": "~/.cybersec-briefing/latest.html",
+      "extra_args": []
+    }
+  ],
+  "halt_on_zero_sources": true,
+  "halt_on_categorize_validation_fail": false,
+  "halt_on_publish_fail": false,
+  "retain_runs_days": 30,
+  "log_file": "~/.cybersec-briefing/runs.log"
+}

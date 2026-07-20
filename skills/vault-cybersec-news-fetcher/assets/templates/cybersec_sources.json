@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "updated": "2026-05-27",
+  "sources": [
+    {
+      "name": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "category": "general",
+      "authority_tier": 2
+    },
+    {
+      "name": "KrebsOnSecurity",
+      "url": "https://krebsonsecurity.com/feed/",
+      "category": "investigative",
+      "authority_tier": 1
+    },
+    {
+      "name": "Bleeping Computer",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "category": "ransomware",
+      "authority_tier": 2
+    },
+    {
+      "name": "SANS Internet Storm Center",
+      "url": "https://isc.sans.edu/rssfeed.xml",
+      "category": "technical",
+      "authority_tier": 1
+    },
+    {
+      "name": "US-CERT CISA Alerts",
+      "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+      "category": "official-advisory",
+      "authority_tier": 1
+    },
+    {
+      "name": "Cisco Talos",
+      "url": "https://blog.talosintelligence.com/rss/",
+      "category": "threat-intel",
+      "authority_tier": 2
+    },
+    {
+      "name": "Schneier on Security",
+      "url": "https://www.schneier.com/feed/atom/",
+      "category": "policy",
+      "authority_tier": 1
+    },
+    {
+      "name": "Dark Reading",
+      "url": "https://www.darkreading.com/rss.xml",
+      "category": "enterprise",
+      "authority_tier": 3
+    },
+    {
+      "name": "ThreatPost",
+      "url": "https://threatpost.com/feed/",
+      "category": "general",
+      "authority_tier": 3
+    },
+    {
+      "name": "CSO Online",
+      "url": "https://www.csoonline.com/feed/",
+      "category": "executive",
+      "authority_tier": 3
+    }
+  ],
+  "extension_sources_available": [
+    {"name": "Recorded Future Blog", "url": "https://www.recordedfuture.com/feed", "category": "threat-intel"},
+    {"name": "Mandiant Blog", "url": "https://www.mandiant.com/resources/blog/rss.xml", "category": "threat-intel"},
+    {"name": "MSRC", "url": "https://msrc.microsoft.com/blog/feed/", "category": "vendor"},
+    {"name": "Project Zero", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "category": "research"},
+    {"name": "Bug Bounty Reports Explained", "url": "https://bugbountyreportsexplained.com/feed/", "category": "research"}
+  ]
+}

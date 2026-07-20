@@ -1,0 +1,59 @@
+{
+  "skill_slug": "cybersec-news-categorizer",
+  "version": "1.0.0",
+  "build_date": "2026-05-27",
+  "module": "Vault G.6 — Capstone Content-Curation Chain",
+  "quality_gates": {
+    "1_description_under_1024_chars": {"pass": true, "actual": 643, "limit": 1024},
+    "2_frontmatter_valid_yaml": {"pass": true},
+    "3_allowed_tools_listed": {"pass": true, "value": "Read, Write"},
+    "4_slug_matches_folder": {"pass": true, "slug": "cybersec-news-categorizer", "folder": "vault-news-categorizer", "note": "'vault-' is the staging prefix; canonical install slug from SKILL.md is cybersec-news-categorizer"},
+    "5_references_folder_has_3plus_files": {"pass": true, "files": ["categorization_rules.md", "bullet_style_guide.md", "relevance_filter.md", "banned_phrases.md"], "count": 4},
+    "6_stdlib_only": {"pass": true, "imports_checked": ["argparse", "json", "re", "sys", "datetime", "pathlib"], "external_deps": []},
+    "7_readme_has_sections": {"pass": true, "sections": ["Installation", "Usage", "Customization", "Output shape", "Troubleshooting"]},
+    "8_license_apache_2": {"pass": true},
+    "9_production_report_live_results": {"pass": true, "see": "tests below"},
+    "10_drops_into_skills_folder": {"pass": true}
+  },
+  "tests": {
+    "live_categorize_test": {
+      "command": "python scripts/categorize.py --input /tmp/deduped.json --output /tmp/briefing.md",
+      "pass": true,
+      "input_items": 116,
+      "categorized_threats": 5,
+      "categorized_news": 5,
+      "categorized_advice": 5,
+      "dropped_low_signal": 6,
+      "verified_2026_05_27": true
+    },
+    "validator_test_on_categorized_output": {
+      "command": "python scripts/validate_briefing.py /tmp/briefing.md",
+      "pass": true,
+      "sections_detected": ["Threats", "News", "Advice"],
+      "items_per_section": {"Threats": 5, "News": 5, "Advice": 5},
+      "word_count": 572,
+      "warnings": 0,
+      "errors": 0
+    },
+    "banned_phrase_detection": {
+      "test": "validator rejects 'critical' as a bare adjective but allows 'critical infrastructure'",
+      "pass": true,
+      "note": "ALLOWED_CRITICAL_CONTEXTS list lets the narrow noun-phrase usages through"
+    },
+    "drop_pattern_coverage": {
+      "test": "drops 'THN Webinar', '[Webinar]', SANS Stormcast filler entries",
+      "pass": true,
+      "patterns_added_after_first_run": ["\\bTHN\\s+Webinar\\b", "\\[\\s*Webinar\\s*\\]", "\\bpodcastdetail\\b", "\\bStormcast\\s+For\\b"],
+      "before_fix_kept_count": "5 items including 'THN Webinar — Learn How to Fight Back'",
+      "after_fix_kept_count": "Webinar item dropped, 6 total drops on 117-item input"
+    },
+    "rendering_url_links_preserved": {
+      "test": "every kept item has [Source: name](url) markdown link",
+      "pass": true,
+      "items_checked": 15,
+      "items_with_source_url": 15
+    }
+  },
+  "vault_member_install_time_estimate_minutes": 3,
+  "vault_member_customize_time_estimate_minutes": 15
+}

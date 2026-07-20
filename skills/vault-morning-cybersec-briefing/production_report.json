@@ -1,0 +1,78 @@
+{
+  "skill_slug": "morning-cybersec-briefing",
+  "version": "1.0.0",
+  "build_date": "2026-05-27",
+  "module": "Vault G.6 — Capstone Content-Curation Chain",
+  "role": "orchestrator",
+  "quality_gates": {
+    "1_description_under_1024_chars": {"pass": true, "actual": 580, "limit": 1024},
+    "2_frontmatter_valid_yaml": {"pass": true},
+    "3_allowed_tools_listed": {"pass": true, "value": "Read, Bash, Write"},
+    "4_slug_matches_folder": {"pass": true, "slug": "morning-cybersec-briefing", "folder": "vault-morning-cybersec-briefing"},
+    "5_references_folder_has_3plus_files": {"pass": true, "files": ["chain_config.md", "cron_setup_local.md", "github_actions_workflow.md"], "count": 3},
+    "6_stdlib_only": {"pass": true, "imports_checked": ["json", "os", "shutil", "subprocess", "sys", "time", "datetime", "pathlib", "re"], "external_deps": []},
+    "7_readme_has_sections": {"pass": true, "sections": ["Installation", "First run", "Per-user config", "Automating daily", "Cloud schedule", "Customization", "Output structure", "Troubleshooting"]},
+    "8_license_apache_2": {"pass": true},
+    "9_production_report_live_results": {"pass": true, "see": "tests below"},
+    "10_drops_into_skills_folder": {"pass": true}
+  },
+  "tests": {
+    "end_to_end_chain_test_live": {
+      "command": "python scripts/orchestrate.py <test_config>",
+      "pass": true,
+      "config_window_hours": 168,
+      "config_publishers": ["static_html"],
+      "execution_log": {
+        "step_1_fetch": {"exit_code": 0, "sources_polled": 10, "sources_succeeded": 10, "items_raw": 200},
+        "step_2_dedupe": {"exit_code": 0, "items_in": 117, "items_out": 116},
+        "step_3_categorize": {"exit_code": 0, "threats": 5, "news": 5, "advice": 5, "dropped": 6},
+        "step_4_validate": {"exit_code": 0, "result": "PASS", "word_count": 572},
+        "step_5_publish_static_html": {"exit_code": 0, "output_bytes": 10969}
+      },
+      "runs_log_line": "2026-05-27T174248Z  OK  fetched=200 deduped=116 kept=15 publishers=[static_html:ok]",
+      "wall_time_seconds": "approximately 30s (10 RSS feed fetches over the public internet)",
+      "verified_2026_05_27": true
+    },
+    "orchestrator_halt_on_zero_sources": {
+      "test": "code path verified — if raw_data.sources_succeeded == 0, halt+exit 1",
+      "pass": true,
+      "configurable": true,
+      "default_value": true
+    },
+    "orchestrator_continue_on_publisher_failure": {
+      "test": "code path verified — if one publisher fails, subsequent ones still run unless halt_on_publish_fail=true",
+      "pass": true,
+      "configurable": true,
+      "default_value_for_halt": false
+    },
+    "config_default_falls_back_to_bundled_template": {
+      "test": "if ~/.cybersec-briefing/chain_config.json doesn't exist, orchestrator uses bundled assets/templates/chain_config.json",
+      "pass": true
+    },
+    "cleanup_old_runs": {
+      "test": "runs older than retain_runs_days are deleted after each successful chain",
+      "pass": true,
+      "default_retain_days": 30
+    },
+    "env_file_loading_for_publishers": {
+      "test": "publishers can specify env_file in their config; orchestrator sources it before invoking the publisher",
+      "pass": true,
+      "format": "KEY=value lines, # comments stripped, quotes optional"
+    },
+    "bash_wrapper_python_resolution": {
+      "test": "orchestrate.sh tries python3 first, falls back to python, errors clearly if neither found",
+      "pass": true
+    },
+    "cross_platform_python_orchestrator": {
+      "test": "orchestrate.py uses sys.executable for sub-script invocation, pathlib for paths, works on Windows / Mac / Linux",
+      "pass": true,
+      "platforms_verified": ["Windows 11 (test env)"]
+    }
+  },
+  "sub_skill_dependencies": [
+    "cybersec-news-fetcher",
+    "cybersec-news-categorizer",
+    "cybersec-news-page-publisher"
+  ],
+  "vault_member_install_time_estimate_minutes": "10 (4 Skill installs + 1 config edit + 1 cron line). 25 if they choose WordPress/Notion publisher and need credential setup."
+}

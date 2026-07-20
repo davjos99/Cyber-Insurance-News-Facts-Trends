@@ -1,0 +1,33 @@
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+This skill (vault-news-categorizer) is an original work built for
+Agent Skills Academy Vault Module G.6 (Capstone — Content-Curation Chain).
+
+The Threats/News/Advice taxonomy is a cybersec-specific adaptation of the
+universal "act now / update mental model / file for later" triage pattern
+used in editorial newsroom workflows. The pattern is widely used and not
+attributable to any single source.
+
+The deterministic categorizer (scripts/categorize.py) is a heuristic
+fallback for headless orchestration (cron / GitHub Actions). When this
+Skill is invoked through Claude Code, the LLM does the categorization
+using the SKILL.md guidance directly.
+
+Adapted by: Agent Skills Academy (Vault Module G, Lesson G.6)
+Build date: 2026-05-27
+
+Copyright 2026 Pragati Kunwer.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing
+permissions and limitations under the License.

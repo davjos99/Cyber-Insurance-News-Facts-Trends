@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Insurance Business UK Cyber",
+    "url": "https://www.insurancebusinessmag.com/uk/news/cyber/",
+    "category": "market",
+    "authority_tier": 1
+  },
+  {
+    "name": "Insurance Business USA Cyber",
+    "url": "https://www.insurancebusinessmag.com/us/news/cyber/",
+    "category": "market",
+    "authority_tier": 1
+  },
+  {
+    "name": "Beinsure Cyber Insurance",
+    "url": "https://beinsure.com/n/cyber-news/",
+    "category": "market",
+    "authority_tier": 2
+  },
+  {
+    "name": "Insurance Times Cyber",
+    "url": "https://www.insurancetimes.co.uk/topics/cyber",
+    "category": "market",
+    "authority_tier": 1
+  },
+  {
+    "name": "Insurance Day Cyber",
+    "url": "https://www.insuranceday.com/markets/cyber",
+    "category": "reinsurance",
+    "authority_tier": 1
+  },
+  {
+    "name": "The Insurer Cyber",
+    "url": "https://www.theinsurer.com/cyber/",
+    "category": "reinsurance",
+    "authority_tier": 1
+  },
+  {
+    "name": "Insurance Edge",
+    "url": "https://insurance-edge.net/",
+    "category": "market",
+    "authority_tier": 2
+  },
+  {
+    "name": "Reinsurance News",
+    "url": "https://www.reinsurancene.ws/",
+    "category": "reinsurance",
+    "authority_tier": 1
+  },
+  {
+    "name": "Global Reinsurance",
+    "url": "https://www.globalreinsurance.com/",
+    "category": "reinsurance",
+    "authority_tier": 1
+  },
+  {
+    "name": "Artemis Cyber Reinsurance",
+    "url": "https://www.artemis.bm/news/topic/cyber-reinsurance/",
+    "category": "reinsurance",
+    "authority_tier": 1
+  },
+  {
+    "name": "Insurance Journal Cyber Topic",
+    "url": "https://www.insurancejournal.com/topics/cyber/",
+    "category": "market",
+    "authority_tier": 2
+  },
+  {
+    "name": "InsuranceAsia News Cyber",
+    "url": "https://insuranceasianews.com/line_of_business/cyber/",
+    "category": "market",
+    "authority_tier": 2
+  },
+  {
+    "name": "Cybersecurity Dive",
+    "url": "https://www.cybersecuritydive.com/deep-dive/",
+    "category": "context",
+    "authority_tier": 2
+  },
+  {
+    "name": "Security Boulevard",
+    "url": "https://securityboulevard.com/",
+    "category": "context",
+    "authority_tier": 2
+  },
+  {
+    "name": "Simply Wall St News",
+    "url": "https://simplywall.st/news/",
+    "category": "market",
+    "authority_tier": 3
+  }
+]

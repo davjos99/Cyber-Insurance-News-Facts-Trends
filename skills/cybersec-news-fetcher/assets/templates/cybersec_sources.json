@@ -45,8 +45,8 @@
     "authority_tier": 1
     },
     {
-      "name": "Insurance Business Mag",
-      "url": "https://www.insurancebusinessmag.com/us/news/cyber/",
+      "name": "CISA Alerts",
+      "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
       "category": "enterprise",
       "authority_tier": 3
     },
@@ -57,8 +57,8 @@
       "authority_tier": 3
     },
     {
-      "name": "Security Boulevard",
-      "url": "https://securityboulevard.com/",
+      "name": "Insurance Journal",
+      "url": "https://www.insurancejournal.com/rss/news",
       "category": "context",
       "authority_tier": 2
     }
@@ -78,7 +78,7 @@
   },
   {
     "name": "Insurance Journal Cyber",
-    "url": "https://www.insurancejournal.com/topics/cyber/",
+    "url": "https://www.insurancejournal.com/rss/news",
     "category": "market",
     "authority_tier": 2
   },

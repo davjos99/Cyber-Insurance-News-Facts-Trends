@@ -9,6 +9,19 @@
     "authority_tier": 2
     },
     {
+    "name": "Insurance Journal",
+    "url": "https://www.insurancejournal.com/rss/news",
+    "category": "market",
+    "authority_tier": 2
+    },
+    {
+    "name": "Insurance Busness America",
+    "url": "https://www.insurancebusinessmag.com/us/rss",
+    "category": "market",
+    "authority_tier": 2
+    "requires_filter": true
+    },
+    {
     "name": "The Insurer Cyber",
     "url": "https://www.theinsurer.com/cyber/",
     "category": "reinsurance",
@@ -27,20 +40,20 @@
     "authority_tier": 1
     },
     {
-    "name": "Reinsurance News Cyber",
-    "url": "https://www.reinsurancene.ws/",
-    "category": "reinsurance",
+    "name": "Business Insurance",
+    "url": "https://www.businessinsurance.com/feed/",
+    "category": "insurance",
     "authority_tier": 1
     },
     {
-    "name": "Insurance Edge Cyber",
-    "url": "https://insurance-edge.net/",
+    "name": "Carrier Management",
+    "url": "https://www.carriermanagement.com/feed/",
     "category": "market",
     "authority_tier": 2
     },
     {
-    "name": "Global Reinsurance",
-    "url": "https://www.globalreinsurance.com/",
+    "name": "Reinsurance News (carrier / cyber market moves)",
+    "url": "https://www.reinsurancene.ws/feed/",
     "category": "reinsurance",
     "authority_tier": 1
     },
@@ -51,8 +64,8 @@
       "authority_tier": 3
     },
     {
-      "name": "Simply Wall St",
-      "url": "https://simplywall.st/news/",
+      "name": "Artemis (risk transfer)",
+      "url": "https://www.artemis.bm/feed/",
       "category": "market",
       "authority_tier": 3
     },

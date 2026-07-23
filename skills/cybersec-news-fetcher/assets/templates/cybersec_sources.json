@@ -61,6 +61,13 @@
       "url": "https://www.insurancejournal.com/rss/news",
       "category": "context",
       "authority_tier": 2
+    },
+     {
+      "name": "Insurance Business US (sitewide)",
+      "url": "https://www.insurancebusinessmag.com/us/rss",
+      "category": "market",
+      "authority_tier": 2,
+      "requires_filter": true
     }
   ],
   "extension_sources_available": [

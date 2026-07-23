@@ -8,8 +8,8 @@
   "filter_topic": "cyber-insurance"
   }, 
   {
-    "name": "Insurance Business UK Cyber",
-    "url": "https://www.insurancebusinessmag.com/uk/news/cyber/",
+    "name": "Data Breach Insurance Blog RSS Feed",
+    "url": "https://databreachinsurancequote.com/feed/",
     "category": "market",
     "authority_tier": 1
   },
@@ -32,8 +32,8 @@
     "authority_tier": 1
   },
   {
-    "name": "Insurance Day Cyber",
-    "url": "https://www.insuranceday.com/markets/cyber",
+    "name": "ProWriters Cyber Insurance Blog RSS Feed",
+    "url": "https://prowritersins.com/feed/",
     "category": "reinsurance",
     "authority_tier": 1
   },
@@ -92,8 +92,8 @@
     "authority_tier": 2
   },
   {
-    "name": "Simply Wall St News",
-    "url": "https://simplywall.st/news/",
+    "name": "Cowbell Cyber Blog",
+    "url": "cowbell.insure/blog",
     "category": "market",
     "authority_tier": 3
   }

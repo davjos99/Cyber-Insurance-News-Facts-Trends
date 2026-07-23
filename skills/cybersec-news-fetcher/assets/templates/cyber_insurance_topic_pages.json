@@ -1,4 +1,12 @@
 [
+ {
+  "name": "Insurance Business US (sitewide)",
+  "url": "https://www.insurancebusinessmag.com/us/rss",
+  "category": "market",
+  "authority_tier": 2,
+  "requires_filter": true,
+  "filter_topic": "cyber-insurance"
+  }, 
   {
     "name": "Insurance Business UK Cyber",
     "url": "https://www.insurancebusinessmag.com/uk/news/cyber/",

@@ -174,7 +174,7 @@ def main() -> int:
     now = datetime.now(timezone.utc)
 
     replacements = {
-        "{TITLE}": html_escape(parsed["title"]),
+        "{TITLE}": "Cybersec Insurance News-Facts-Trends",
         "{WINDOW_HOURS}": html_escape(parsed["window_hours"]),
         "{SOURCES_POLLED}": html_escape(parsed["sources_polled"]),
         "{ITEMS_KEPT}": html_escape(parsed["items_kept"]),

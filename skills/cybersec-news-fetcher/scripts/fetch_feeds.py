@@ -285,6 +285,14 @@ def fetch_one_source(source: dict, now: datetime) -> tuple[list[dict], str | Non
     except ValueError as e:
         return [], f"parse error: {e}"
 
+ # NEW: optional cyber-insurance filter for this source
+    requires_filter = source.get("requires_filter", False)
+    if requires_filter:
+        before = len(parsed)
+        parsed = [it for it in parsed if is_cyber_insurance(it)]
+        after = len(parsed)
+        log(f"  -> filtered cyber-insurance items: {after}/{before}")
+  
     items = normalize_items(parsed, name, now)
     log(f"  -> {len(items)} items")
     return items, None

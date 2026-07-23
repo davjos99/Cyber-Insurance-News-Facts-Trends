@@ -47,6 +47,44 @@ FALLBACK_UA = (
 TIMEOUT_S = 15
 SUMMARY_MAX_CHARS = 500
 
+def is_cyber_insurance(item: dict) -> bool:
+    """Return True if this normalized item looks like cyber insurance news."""
+    title = (item.get("title") or "").lower()
+    desc = (item.get("summary") or "").lower()
+
+    text = " ".join([title, desc])
+
+    must_have_any = [
+        "cyber insurance",
+        "cyber-insurance",
+        "cybersecurity insurance",
+        "cyber risk",
+        "cyber coverage",
+        "cyber liability",
+        "ransomware coverage",
+        "cyber policy",
+        "cyber premiums",
+        "cyber underwriting",
+    ]
+
+    insurance_terms = [
+        "insurance",
+        "insurer",
+        "underwriting",
+        "policy",
+        "premiums",
+        "broker",
+        "carrier",
+    ]
+
+    if not any(term in text for term in must_have_any):
+        return False
+
+    if not any(term in text for term in insurance_terms):
+        return False
+
+    return True
+
 # Atom namespace map
 NS = {
     "atom": "http://www.w3.org/2005/Atom",

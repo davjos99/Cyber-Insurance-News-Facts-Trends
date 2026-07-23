@@ -18,7 +18,7 @@
     "name": "Insurance Busness America",
     "url": "https://www.insurancebusinessmag.com/us/rss",
     "category": "market",
-    "authority_tier": 2
+    "authority_tier": 2,
     "requires_filter": true
     },
     {

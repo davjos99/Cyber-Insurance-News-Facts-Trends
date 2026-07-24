@@ -12,7 +12,8 @@
     "name": "Insurance Journal",
     "url": "https://www.insurancejournal.com/rss/news",
     "category": "market",
-    "authority_tier": 2
+    "authority_tier": 2,
+    "requires_filter": true
     },
     {
     "name": "Insurance Busness America",
@@ -43,19 +44,22 @@
     "name": "Business Insurance",
     "url": "https://www.businessinsurance.com/feed/",
     "category": "insurance",
-    "authority_tier": 1
+    "authority_tier": 1,
+    "requires_filter": true
     },
     {
     "name": "Carrier Management",
     "url": "https://www.carriermanagement.com/feed/",
     "category": "market",
-    "authority_tier": 2
+    "authority_tier": 2,
+    "requires_filter": true
     },
     {
     "name": "Reinsurance News (carrier / cyber market moves)",
     "url": "https://www.reinsurancene.ws/feed/",
     "category": "reinsurance",
-    "authority_tier": 1
+    "authority_tier": 1,
+    "requires_filter": true
     },
     {
       "name": "CISA Alerts",
@@ -67,7 +71,8 @@
       "name": "Artemis (risk transfer)",
       "url": "https://www.artemis.bm/feed/",
       "category": "market",
-      "authority_tier": 3
+      "authority_tier": 3,
+      "requires_filter": true
     },
     {
       "name": "Insurance Journal",

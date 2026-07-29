@@ -15,7 +15,7 @@
       "url": "https://www.insurancebusinessmag.com/us/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": true,
+      "requires_filter": false,
       "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     },
     {
@@ -23,7 +23,7 @@
       "url": "https://www.insurancebusinessmag.com/uk/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": true,
+      "requires_filter": false,
       "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     },
     {
@@ -31,15 +31,21 @@
       "url": "https://www.canadianunderwriter.ca/global-category/cyber/feed/",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Dedicated cyber feed."
+      "requires_filter": false
+    },
+    {
+      "name": "Canadian Underwriter Cyber",
+      "url": "https://www.canadianunderwriter.ca/cyber/feed/",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": false
     },
     {
       "name": "Asia Insurance Review RSS",
       "url": "https://www.asiainsurancereview.com/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": true,
+      "requires_filter": false,
       "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     }
   ]

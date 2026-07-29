@@ -47,45 +47,6 @@ FALLBACK_UA = (
 TIMEOUT_S = 15
 SUMMARY_MAX_CHARS = 500
 
-def is_cyber_insurance(item: dict) -> bool:
-    """Return True if this normalized item looks like cyber insurance news."""
-    title = (item.get("title") or "").lower()
-    desc = (item.get("summary") or "").lower()
-
-    text = " ".join([title, desc])
-
-    must_have_any = [
-        "cyber insurance",
-        "cyber-insurance",
-        "cybersecurity insurance",
-        "cyber risk",
-        "cyber coverage",
-        "cyber liability",
-        "ransomware coverage",
-        "cyber policy",
-        "cyber premiums",
-        "cyber underwriting",
-    ]
-
-    insurance_terms = [
-        "insurance",
-        "insurer",
-        "underwriting",
-        "policy",
-        "premiums",
-        "broker",
-        "carrier",
-    ]
-
-    if not any(term in text for term in must_have_any):
-        return False
-
-    if not any(term in text for term in insurance_terms):
-        return False
-
-    return True
-
-# Atom namespace map
 NS = {
     "atom": "http://www.w3.org/2005/Atom",
     "content": "http://purl.org/rss/1.0/modules/content/",
@@ -93,9 +54,9 @@ NS = {
 }
 
 TEST_SOURCES = [
-    {"name": "The Hacker News",  "url": "https://feeds.feedburner.com/TheHackersNews", "authority_tier": 2},
-    {"name": "KrebsOnSecurity",  "url": "https://krebsonsecurity.com/feed/",            "authority_tier": 1},
-    {"name": "Bleeping Computer","url": "https://www.bleepingcomputer.com/feed/",        "authority_tier": 2},
+    {"name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "authority_tier": 2},
+    {"name": "KrebsOnSecurity", "url": "https://krebsonsecurity.com/feed/", "authority_tier": 1},
+    {"name": "Bleeping Computer", "url": "https://www.bleepingcomputer.com/feed/", "authority_tier": 2},
 ]
 
 
@@ -107,7 +68,6 @@ def strip_html(s: str) -> str:
     if not s:
         return ""
     s = re.sub(r"<[^>]+>", "", s)
-    # Decode common HTML entities (stdlib html.unescape handles numeric + named)
     import html as _html
     s = _html.unescape(s)
     s = re.sub(r"\s+", " ", s).strip()
@@ -124,7 +84,6 @@ def parse_date(s: str) -> datetime | None:
     if not s:
         return None
     s = s.strip()
-    # Try RFC 822 (RSS) first
     try:
         dt = parsedate_to_datetime(s)
         if dt is not None:
@@ -133,7 +92,7 @@ def parse_date(s: str) -> datetime | None:
             return dt
     except (TypeError, ValueError):
         pass
-    # Try ISO 8601 (Atom)
+
     for fmt in (
         "%Y-%m-%dT%H:%M:%S%z",
         "%Y-%m-%dT%H:%M:%SZ",
@@ -148,7 +107,7 @@ def parse_date(s: str) -> datetime | None:
             return dt
         except ValueError:
             continue
-    # Final attempt — fromisoformat is forgiving
+
     try:
         s2 = s.replace("Z", "+00:00")
         dt = datetime.fromisoformat(s2)
@@ -159,8 +118,62 @@ def parse_date(s: str) -> datetime | None:
         return None
 
 
+def is_cyber_insurance(item: dict) -> bool:
+    """Return True if this normalized item looks like cyber insurance news."""
+    text = f"{item.get('title', '')} {item.get('summary', '')}".lower()
+
+    must_have_any = [
+        "cyber insurance",
+        "cyber-insurance",
+        "cybersecurity insurance",
+        "cyber liability",
+        "cyber cover",
+        "cyber coverage",
+        "cyber policy",
+        "cyber policy wording",
+        "cyber exclusions",
+        "cyber premium",
+        "cyber premiums",
+        "cyber underwriting",
+        "cyber insurer",
+        "cyber insurance gap",
+        "cyber risk transfer",
+        "cyber reinsurance",
+        "reinsurance",
+        "claims",
+        "loss ratio",
+        "broker",
+        "capacity",
+    ]
+
+    cyber_terms = [
+        "cyber",
+        "ransomware",
+        "data breach",
+        "privacy",
+        "spyware",
+        "malware",
+    ]
+
+    exclude_terms = [
+        "patch tuesday",
+        "zero-day",
+        "cve-",
+        "malware campaign",
+        "vulnerability",
+        "advisory",
+        "alert",
+        "how to",
+        "tips",
+    ]
+
+    if any(term in text for term in exclude_terms):
+        return False
+
+    return any(term in text for term in must_have_any) and any(term in text for term in cyber_terms)
+
+
 def fetch_url(url: str, ua: str = USER_AGENT) -> bytes:
-    """One attempt with a polite UA. Raises on failure."""
     req = urllib.request.Request(
         url,
         headers={
@@ -174,7 +187,6 @@ def fetch_url(url: str, ua: str = USER_AGENT) -> bytes:
 
 
 def fetch_with_retry(url: str) -> bytes:
-    """Polite UA, retry once on transient errors, fall back to browser UA on 403."""
     last_err = None
     for attempt, ua in enumerate([USER_AGENT, USER_AGENT, FALLBACK_UA]):
         try:
@@ -184,7 +196,6 @@ def fetch_with_retry(url: str) -> bytes:
         except urllib.error.HTTPError as e:
             last_err = e
             if e.code in (403, 401) and ua != FALLBACK_UA:
-                # Try fallback UA next iteration
                 continue
             if 500 <= e.code < 600 and attempt < 2:
                 continue
@@ -200,7 +211,6 @@ def fetch_with_retry(url: str) -> bytes:
 
 
 def parse_feed_bytes(raw: bytes, source_name: str) -> list[dict]:
-    """Auto-detect RSS vs Atom and return a list of normalized items."""
     try:
         root = ET.fromstring(raw)
     except ET.ParseError as e:
@@ -208,12 +218,9 @@ def parse_feed_bytes(raw: bytes, source_name: str) -> list[dict]:
 
     items: list[dict] = []
     tag = root.tag.lower()
-    # When the root uses xmlns="http://www.w3.org/2005/Atom" without a prefix,
-    # ElementTree gives every child a {ns}name tag. Detect that case.
     is_atom_default_ns = root.tag.endswith("}feed") and "Atom" in root.tag
 
     if not is_atom_default_ns and ("rss" in tag or root.find("channel") is not None):
-        # RSS 2.0
         channel = root.find("channel") or root
         for item in channel.findall("item"):
             title = (item.findtext("title") or "").strip()
@@ -223,16 +230,16 @@ def parse_feed_bytes(raw: bytes, source_name: str) -> list[dict]:
             if content_encoded is not None and content_encoded.text:
                 desc = content_encoded.text
             pub_date = item.findtext("pubDate") or item.findtext("dc:date", default="", namespaces=NS)
-            items.append({
-                "title": title,
-                "summary": truncate(strip_html(desc)),
-                "url": link,
-                "published_date_raw": pub_date.strip() if pub_date else "",
-            })
+            items.append(
+                {
+                    "title": title,
+                    "summary": truncate(strip_html(desc)),
+                    "url": link,
+                    "published_date_raw": pub_date.strip() if pub_date else "",
+                }
+            )
     else:
-        # Atom 1.0 — try BOTH explicit atom: namespace AND default-namespace path
         def afind(parent, name):
-            # Try unprefixed first (works when parser handles ns transparently)
             el = parent.find(name)
             if el is not None:
                 return el
@@ -248,7 +255,6 @@ def parse_feed_bytes(raw: bytes, source_name: str) -> list[dict]:
         for entry in entries:
             t = afind(entry, "title")
             title = (t.text or "").strip() if t is not None and t.text else ""
-            # link with rel="alternate" preferred
             link_el = None
             for cand in afindall(entry, "link"):
                 if cand.get("rel", "alternate") == "alternate":
@@ -265,29 +271,30 @@ def parse_feed_bytes(raw: bytes, source_name: str) -> list[dict]:
             pub = afind(entry, "published") or afind(entry, "updated")
             pub_date = (pub.text or "").strip() if pub is not None and pub.text else ""
             if title and link:
-                items.append({
-                    "title": title,
-                    "summary": truncate(strip_html(desc)),
-                    "url": link,
-                    "published_date_raw": pub_date,
-                })
+                items.append(
+                    {
+                        "title": title,
+                        "summary": truncate(strip_html(desc)),
+                        "url": link,
+                        "published_date_raw": pub_date,
+                    }
+                )
 
     return items
 
 
 def normalize_items(items: list[dict], source_name: str, now: datetime) -> list[dict]:
-    """Coerce parsed items to the canonical shape with raw_age_hours computed."""
     out: list[dict] = []
     for it in items:
         if not it.get("title") or not it.get("url"):
-            continue  # skip empty entries
+            continue
         dt = parse_date(it.get("published_date_raw", ""))
         fallback = dt is None
         if dt is None:
-            dt = now  # treat as just-published
+            dt = now
         age_hours = (now - dt).total_seconds() / 3600.0
         if age_hours < 0:
-            age_hours = 0.0  # future-dated items get clamped
+            age_hours = 0.0
         item = {
             "title": it["title"],
             "summary": it.get("summary", ""),
@@ -303,7 +310,6 @@ def normalize_items(items: list[dict], source_name: str, now: datetime) -> list[
 
 
 def fetch_one_source(source: dict, now: datetime) -> tuple[list[dict], str | None]:
-    """Returns (items, error_reason). error_reason is None on success."""
     name = source["name"]
     url = source["url"]
     log(f"Fetching: {name}  ({url})")
@@ -323,14 +329,13 @@ def fetch_one_source(source: dict, now: datetime) -> tuple[list[dict], str | Non
     except ValueError as e:
         return [], f"parse error: {e}"
 
- # NEW: optional cyber-insurance filter for this source
     requires_filter = source.get("requires_filter", False)
     if requires_filter:
         before = len(parsed)
         parsed = [it for it in parsed if is_cyber_insurance(it)]
         after = len(parsed)
         log(f"  -> filtered cyber-insurance items: {after}/{before}")
-  
+
     items = normalize_items(parsed, name, now)
     log(f"  -> {len(items)} items")
     return items, None
@@ -375,7 +380,6 @@ def main() -> int:
     items_raw = len(all_items)
     log(f"Total items pre-filter: {items_raw}")
 
-    # Time window filter
     filtered = [it for it in all_items if it["raw_age_hours"] <= args.since]
     log(f"After time filter (<={args.since}h): {len(filtered)}")
 

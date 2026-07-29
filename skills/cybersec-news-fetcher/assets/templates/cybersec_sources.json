@@ -3,6 +3,86 @@
   "updated": "2026-05-27",
   "sources": [
     {
+"name": "RSS.app Cyber Insurance Feed",
+      "url": "https://rss.app/r/feed/t8AGNvHfvc3bx5Hi",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Already curated cyber insurance feed."
+    },
+    {
+      "name": "Insurance Business UK",
+      "url": "https://www.insurancebusinessmag.com/uk/rss",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
+    },
+    {
+      "name": "Insurance Business US",
+      "url": "https://www.insurancebusinessmag.com/us/rss",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
+    },
+    {
+      "name": "Asia Insurance Review",
+      "url": "https://www.asiainsurancereview.com/rss",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Broad insurance feed; cyber-related items only."
+    },
+    {
+      "name": "Insurance Journal Cyber",
+      "url": "https://www.insurancejournal.com/topics/cyber/feed/",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Cyber topic feed, if available."
+    },
+    {
+      "name": "Canadian Underwriter Cyber",
+      "url": "https://www.canadianunderwriter.ca/global-category/cyber/feed/",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Dedicated cyber feed."
+    },
+    {
+      "name": "InsuranceAsia Cyber",
+      "url": "https://insuranceasia.com/topics/cyber-insurance",
+      "category": "market",
+      "authority_tier": 2,
+      "requires_filter": true,
+      "notes": "HTML topic page; include only if your feed fetcher can actually read it. Otherwise move to topic_pages."
+    },
+    {
+      "name": "The Insurer Cyber",
+      "url": "https://www.theinsurer.com/cyber/",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "HTML topic page; move to topic_pages if not a real RSS feed."
+    },
+    {
+      "name": "Slipcase Cyber Insurance",
+      "url": "https://www.slipcase.com/view/sme-cyber-insurance-gap-is-a-risk-too-big-to-ignore/3",
+      "category": "market",
+      "authority_tier": 2,
+      "requires_filter": false,
+      "notes": "Example article URL, not a feed. Use in topic_pages or as a curated link, not in fetch_feeds."
+    },
+    {
+      "name": "Brit cyber gap news",
+      "url": "https://www.britinsurance.com/news/brit-addressing-the-cyber-gap-with-smes",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Example article URL, not a feed. Use in topic_pages or as a curated link, not in fetch_feeds."
+    },
+    {  
     "name": "Beinsure Cyber Insurance",
     "url": "https://beinsure.com/n/cyber-news/",
     "category": "market",

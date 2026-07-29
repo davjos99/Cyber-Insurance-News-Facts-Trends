@@ -1,22 +1,14 @@
 {
   "version": "1.0",
-  "updated": "2026-05-27",
+  "updated": "2026-07-28",
   "sources": [
     {
-"name": "RSS.app Cyber Insurance Feed",
+      "name": "RSS.app Cyber Insurance Feed",
       "url": "https://rss.app/r/feed/t8AGNvHfvc3bx5Hi",
       "category": "aggregated",
       "authority_tier": 1,
       "requires_filter": false,
-      "notes": "Already curated cyber insurance feed."
-    },
-    {
-      "name": "Insurance Business UK",
-      "url": "https://www.insurancebusinessmag.com/uk/rss",
-      "category": "market",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
+      "notes": "Curated cyber insurance feed."
     },
     {
       "name": "Insurance Business US",
@@ -27,20 +19,12 @@
       "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     },
     {
-      "name": "Asia Insurance Review",
-      "url": "https://www.asiainsurancereview.com/rss",
+      "name": "Insurance Business UK",
+      "url": "https://www.insurancebusinessmag.com/uk/rss",
       "category": "market",
       "authority_tier": 1,
       "requires_filter": true,
-      "notes": "Broad insurance feed; cyber-related items only."
-    },
-    {
-      "name": "Insurance Journal Cyber",
-      "url": "https://www.insurancejournal.com/topics/cyber/feed/",
-      "category": "market",
-      "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Cyber topic feed, if available."
+      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     },
     {
       "name": "Canadian Underwriter Cyber",
@@ -51,171 +35,12 @@
       "notes": "Dedicated cyber feed."
     },
     {
-      "name": "InsuranceAsia Cyber",
-      "url": "https://insuranceasia.com/topics/cyber-insurance",
-      "category": "market",
-      "authority_tier": 2,
-      "requires_filter": true,
-      "notes": "HTML topic page; include only if your feed fetcher can actually read it. Otherwise move to topic_pages."
-    },
-    {
-      "name": "The Insurer Cyber",
-      "url": "https://www.theinsurer.com/cyber/",
+      "name": "Asia Insurance Review RSS",
+      "url": "https://www.asiainsurancereview.com/rss",
       "category": "market",
       "authority_tier": 1,
       "requires_filter": true,
-      "notes": "HTML topic page; move to topic_pages if not a real RSS feed."
-    },
-    {
-      "name": "Slipcase Cyber Insurance",
-      "url": "https://www.slipcase.com/view/sme-cyber-insurance-gap-is-a-risk-too-big-to-ignore/3",
-      "category": "market",
-      "authority_tier": 2,
-      "requires_filter": false,
-      "notes": "Example article URL, not a feed. Use in topic_pages or as a curated link, not in fetch_feeds."
-    },
-    {
-      "name": "Brit cyber gap news",
-      "url": "https://www.britinsurance.com/news/brit-addressing-the-cyber-gap-with-smes",
-      "category": "market",
-      "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Example article URL, not a feed. Use in topic_pages or as a curated link, not in fetch_feeds."
-    },
-    {  
-    "name": "Beinsure Cyber Insurance",
-    "url": "https://beinsure.com/n/cyber-news/",
-    "category": "market",
-    "authority_tier": 2
-    "requires_filter": true  
-    },
-    {
-    "name": "Insurance Journal",
-    "url": "https://www.insurancejournal.com/rss/news",
-    "category": "market",
-    "authority_tier": 2,
-    "requires_filter": true
-    },
-    {
-    "name": "Insurance Busness America",
-    "url": "https://www.insurancebusinessmag.com/us/rss",
-    "category": "market",
-    "authority_tier": 2,
-    "requires_filter": true
-    },
-    {
-    "name": "The Insurer Cyber",
-    "url": "https://www.theinsurer.com/cyber/",
-    "category": "reinsurance",
-    "authority_tier": 1
-    "requires_filter": true  
-    },
-    {
-    "name": "Insurance Day Cyber",
-    "url": "https://www.insuranceday.com/markets/cyber",
-    "category": "market",
-    "authority_tier": 1
-    "requires_filter": true  
-    },
-    {
-    "name": "Insurance Times Cyber",
-    "url": "https://www.insurancetimes.co.uk/cyber",
-    "category": "market",
-    "authority_tier": 1
-    "requires_filter": true  
-    },
-    {
-    "name": "Business Insurance",
-    "url": "https://www.businessinsurance.com/feed/",
-    "category": "insurance",
-    "authority_tier": 1,
-    "requires_filter": true
-    },
-    {
-    "name": "Carrier Management",
-    "url": "https://www.carriermanagement.com/feed/",
-    "category": "market",
-    "authority_tier": 2,
-    "requires_filter": true
-    },
-    {
-    "name": "Reinsurance News (carrier / cyber market moves)",
-    "url": "https://www.reinsurancene.ws/feed/",
-    "category": "reinsurance",
-    "authority_tier": 1,
-    "requires_filter": true
-    },
-    {
-      "name": "CISA Alerts",
-      "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
-      "category": "enterprise",
-      "authority_tier": 3
-      "requires_filter": true
-    },
-    {
-      "name": "Artemis (risk transfer)",
-      "url": "https://www.artemis.bm/feed/",
-      "category": "market",
-      "authority_tier": 3,
-      "requires_filter": true
-    },
-    {
-      "name": "Insurance Journal",
-      "url": "https://www.insurancejournal.com/rss/news",
-      "category": "context",
-      "authority_tier": 2
-      "requires_filter": true
-    },
-     {
-      "name": "Insurance Business US (sitewide)",
-      "url": "https://www.insurancebusinessmag.com/us/rss",
-      "category": "market",
-      "authority_tier": 2,
-      "requires_filter": true
+      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     }
-  ],
-  "extension_sources_available": [
-  {
-    "name": "Artemis Cyber Reinsurance",
-    "url": "https://www.artemis.bm/news/topic/cyber-reinsurance/",
-    "category": "reinsurance",
-    "authority_tier": 1
-    "requires_filter": true
-  },
-  {
-    "name": "Global Reinsurance Cyber Insurance",
-    "url": "https://www.globalreinsurance.com/cyber-insurance/921.tag",
-    "category": "reinsurance",
-    "authority_tier": 1
-    "requires_filter": true
-  },
-  {
-    "name": "Insurance Journal Cyber",
-    "url": "https://www.insurancejournal.com/rss/news",
-    "category": "market",
-    "authority_tier": 2
-    "requires_filter": true
-  },
-  {
-    "name": "Insurance Business Reinsurance Cyber",
-    "url": "https://www.insurancebusinessmag.com/reinsurance/news/",
-    "category": "market",
-    "authority_tier": 2
-    "requires_filter": true
-  },
-  {
-    "name": "The Insurer Cyber Risk Insurer",
-    "url": "https://www.theinsurer.com/cyber/",
-    "category": "market",
-    "authority_tier": 1
-    "requires_filter": true
-  },
-  {
-    "name": "InsuranceAsia News Cyber",
-    "url": "https://insuranceasianews.com/line_of_business/cyber/",
-    "category": "market",
-    "authority_tier": 2
-    "requires_filter": true
-  }
-]
+  ]
 }

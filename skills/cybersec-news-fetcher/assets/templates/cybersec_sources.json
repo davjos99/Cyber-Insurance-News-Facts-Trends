@@ -7,6 +7,7 @@
     "url": "https://beinsure.com/n/cyber-news/",
     "category": "market",
     "authority_tier": 2
+    "requires_filter": true  
     },
     {
     "name": "Insurance Journal",
@@ -27,18 +28,21 @@
     "url": "https://www.theinsurer.com/cyber/",
     "category": "reinsurance",
     "authority_tier": 1
+    "requires_filter": true  
     },
     {
     "name": "Insurance Day Cyber",
     "url": "https://www.insuranceday.com/markets/cyber",
     "category": "market",
     "authority_tier": 1
+    "requires_filter": true  
     },
     {
     "name": "Insurance Times Cyber",
     "url": "https://www.insurancetimes.co.uk/cyber",
     "category": "market",
     "authority_tier": 1
+    "requires_filter": true  
     },
     {
     "name": "Business Insurance",
@@ -66,6 +70,7 @@
       "url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
       "category": "enterprise",
       "authority_tier": 3
+      "requires_filter": true
     },
     {
       "name": "Artemis (risk transfer)",
@@ -79,6 +84,7 @@
       "url": "https://www.insurancejournal.com/rss/news",
       "category": "context",
       "authority_tier": 2
+      "requires_filter": true
     },
      {
       "name": "Insurance Business US (sitewide)",
@@ -94,36 +100,42 @@
     "url": "https://www.artemis.bm/news/topic/cyber-reinsurance/",
     "category": "reinsurance",
     "authority_tier": 1
+    "requires_filter": true
   },
   {
     "name": "Global Reinsurance Cyber Insurance",
     "url": "https://www.globalreinsurance.com/cyber-insurance/921.tag",
     "category": "reinsurance",
     "authority_tier": 1
+    "requires_filter": true
   },
   {
     "name": "Insurance Journal Cyber",
     "url": "https://www.insurancejournal.com/rss/news",
     "category": "market",
     "authority_tier": 2
+    "requires_filter": true
   },
   {
     "name": "Insurance Business Reinsurance Cyber",
     "url": "https://www.insurancebusinessmag.com/reinsurance/news/",
     "category": "market",
     "authority_tier": 2
+    "requires_filter": true
   },
   {
     "name": "The Insurer Cyber Risk Insurer",
     "url": "https://www.theinsurer.com/cyber/",
     "category": "market",
     "authority_tier": 1
+    "requires_filter": true
   },
   {
     "name": "InsuranceAsia News Cyber",
     "url": "https://insuranceasianews.com/line_of_business/cyber/",
     "category": "market",
     "authority_tier": 2
+    "requires_filter": true
   }
 ]
 }

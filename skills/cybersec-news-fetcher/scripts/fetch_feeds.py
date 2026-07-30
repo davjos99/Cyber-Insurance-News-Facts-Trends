@@ -117,60 +117,36 @@ def parse_date(s: str) -> datetime | None:
     except ValueError:
         return None
 
-
 def is_cyber_insurance(item: dict) -> bool:
-    """Return True if this normalized item looks like cyber insurance news."""
+    """Return True if this item looks like cyber insurance / coverage / market news."""
     text = f"{item.get('title', '')} {item.get('summary', '')}".lower()
 
-    must_have_any = [
-        "cyber insurance",
-        "cyber-insurance",
-        "cybersecurity insurance",
-        "cyber liability",
-        "cyber cover",
-        "cyber coverage",
-        "cyber policy",
-        "cyber policy wording",
-        "cyber exclusions",
-        "cyber premium",
-        "cyber premiums",
-        "cyber underwriting",
-        "cyber insurer",
-        "cyber insurance gap",
-        "cyber risk transfer",
-        "cyber reinsurance",
-        "reinsurance",
-        "claims",
-        "loss ratio",
-        "broker",
-        "capacity",
+    # Insurance + cyber must be present
+    insurance_terms = [
+        "insurance", "insurer", "underwriting", "policy", "premiums",
+        "broker", "carrier", "coverage", "liability", "exclusion",
+        "capacity", "loss ratio", "reinsurance"
     ]
 
     cyber_terms = [
-        "cyber",
-        "ransomware",
-        "data breach",
-        "privacy",
-        "spyware",
-        "malware",
+        "cyber", "ransomware", "data breach", "privacy", "spyware", "malware",
+        "incident response"
     ]
 
     exclude_terms = [
-        "patch tuesday",
-        "zero-day",
-        "cve-",
-        "malware campaign",
-        "vulnerability",
-        "advisory",
-        "alert",
-        "how to",
-        "tips",
+        "patch tuesday", "zero-day", "cve-", "bug bounty",
+        "how to", "tips", "best practices", "training", "webinar"
     ]
 
+    # Explicitly skip purely technical/security-only pieces
     if any(term in text for term in exclude_terms):
         return False
 
-    return any(term in text for term in must_have_any) and any(term in text for term in cyber_terms)
+    has_insurance = any(term in text for term in insurance_terms)
+    has_cyber = any(term in text for term in cyber_terms)
+
+    return has_insurance and has_cyber
+
 
 
 def fetch_url(url: str, ua: str = USER_AGENT) -> bytes:

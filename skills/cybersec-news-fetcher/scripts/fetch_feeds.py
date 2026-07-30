@@ -305,6 +305,10 @@ def fetch_one_source(source: dict, now: datetime) -> tuple[list[dict], str | Non
     except ValueError as e:
         return [], f"parse error: {e}"
 
+    # NEW: log how many items we parsed before filtering
+    log(f"  parsed {len(parsed)} items from {name}")
+
+    # Optional cyber insurance filter for this source
     requires_filter = source.get("requires_filter", False)
     if requires_filter:
         before = len(parsed)

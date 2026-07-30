@@ -15,7 +15,7 @@
       "url": "https://www.insurancebusinessmag.com/us/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": false,
+      "requires_filter": true,
       "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     },
     {
@@ -23,7 +23,7 @@
       "url": "https://www.insurancebusinessmag.com/uk/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": false,
+      "requires_filter": true,
       "notes": "Broad insurance feed; filter to keep cyber insurance items only."
     },
     {

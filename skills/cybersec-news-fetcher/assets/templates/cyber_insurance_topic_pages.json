@@ -3,6 +3,48 @@
   "updated": "2026-07-28",
   "topic_pages": [
     {
+      "name": "Resilience",
+      "url": "https://www.cyberresilience.com/resources",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Excellent cyber insurance and risk intelligence."
+    },
+    {
+      "name": "Marsh Cyber Resource Center",
+      "url": "https://www.marsh.com/us/services/cyber-risk.html",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Annual cyber claims reports, pricing, ransomware trends."
+    },
+    {
+      "name": "Aon Cyber Solutions",
+      "url": "https://www.aon.com/cyber-solutions",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Cyber risk reports, benchmarking, insurance insights."
+    },
+    {
+      "name": "WTW Cyber Risk",
+      "url": "https://www.wtwco.com/en-us/solutions/risk-and-broking/cyber-risk",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Cyber insurance market analysis."
+    },
+    {
+      "name": "Lockton Cyber & Technology",
+      "url": "https://global.lockton.com/us/en/services/cyber-and-technology",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Coverage guidance and claims insights."
+    },
+    {
+      "name": "Woodruff Sawyer Cyber Liability Center",
+      "url": "https://woodruffsawyer.com/services/cyber-liability",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Frequent ransomware and cyber insurance articles."
+    },
+    {
       "name": "Asia Insurance Review Cyber Insurance",
       "url": "https://www.asiainsurancereview.com/Magazine/ReadMagazineArticle/aid/59580/Cyber-insurance-moves-from-niche-to-critical",
       "category": "market",

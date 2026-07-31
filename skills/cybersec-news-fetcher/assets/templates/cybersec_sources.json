@@ -11,6 +11,30 @@
       "notes": "Curated cyber insurance feed."
     },
     {
+      "name": "At-Bay Blog",
+      "url": "https://www.at-bay.com/blog/feed/",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Cyber insurance, ransomware, claims."
+    },
+    {
+      "name": "Coalition Blog",
+      "url": "https://blog.coalitioninc.com/rss.xml",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Cyber insurance and active cyber risk."
+    },
+    {
+      "name": "Data Breach Insurance Quote Blog",
+      "url": "https://databreachinsurancequote.com/feed",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Cyber insurance & data breach coverage."
+    },
+    {
       "name": "Cowbell Cyber Blog",
       "url": "https://cowbell.insure/feed",
       "category": "aggregated",
@@ -35,7 +59,7 @@
       "notes": "Insurance industry news - frequent cyber insurance coverage"
     },
     {
-      "name": "Insurance Journal (cyber search term)",
+      "name": "Insurance Journal - cyber",
       "url": "https://www.insurancejournal.com/search/?q=cyber",
       "category": "market",
       "authority_tier": 1,

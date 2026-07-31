@@ -11,6 +11,14 @@
       "notes": "Curated cyber insurance feed."
     },
     {
+      "name": "Insurance Journal (cyber search term)",
+      "url": "https://www.insurancejournal.com/search/?q=cyber",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Broad insurance feed; filtered by cyber keyword."
+    },
+    {
       "name": "Insurance Business US",
       "url": "https://www.insurancebusinessmag.com/us/rss",
       "category": "market",

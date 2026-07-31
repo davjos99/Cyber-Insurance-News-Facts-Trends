@@ -15,7 +15,7 @@
       "url": "https://www.at-bay.com/blog/feed/",
       "category": "aggregated",
       "authority_tier": 1,
-      "requires_filter": false,
+      "requires_filter": true,
       "notes": "Cyber insurance, ransomware, claims."
     },
     {
@@ -23,7 +23,7 @@
       "url": "https://blog.coalitioninc.com/rss.xml",
       "category": "aggregated",
       "authority_tier": 1,
-      "requires_filter": false,
+      "requires_filter": true,
       "notes": "Cyber insurance and active cyber risk."
     },
     {
@@ -31,7 +31,7 @@
       "url": "https://databreachinsurancequote.com/feed",
       "category": "aggregated",
       "authority_tier": 1,
-      "requires_filter": false,
+      "requires_filter": true,
       "notes": "Cyber insurance & data breach coverage."
     },
     {

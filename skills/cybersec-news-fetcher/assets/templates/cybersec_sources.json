@@ -11,6 +11,78 @@
       "notes": "Curated cyber insurance feed."
     },
     {
+      "name": "Hunton Privacy and Security Law Blog",
+      "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/?rss",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Curated cyber insurance feed."
+    },
+    {
+      "name": "Privacy World Blog",
+      "url": "https://www.privacyworld.blog/feed/",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Laws on data privacy, security and innovation."
+    },
+    {
+      "name": "DataBreaches.net",
+      "url": "https://databreaches.net/feed/",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": false,
+      "notes": "Data Breach News."
+    },
+    {
+      "name": "Property Casualty 360",
+      "url": "https://www.propertycasualty360.com",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance feed."
+    },
+    {
+      "name": "Carrier Management",
+      "url": "https://www.carriermanagement.com",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance feed."
+    },
+    {
+      "name": "Reinsurance NE",
+      "url": "https://www.reinsurancene.ws",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance feed."
+    },
+    {
+      "name": "Claims Journal",
+      "url": "https://www.claimsjournal.com",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance feed."
+    },
+    {
+      "name": "Risk and Insurance",
+      "url": "https://riskandinsurance.com",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance feed."
+    },
+    {
+      "name": "Business Insurance",
+      "url": "https://www.businessinsurance.com",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance feed."
+    },
+    {
       "name": "At-Bay Blog",
       "url": "https://www.at-bay.com/blog/feed/",
       "category": "aggregated",

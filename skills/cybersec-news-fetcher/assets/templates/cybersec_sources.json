@@ -11,6 +11,30 @@
       "notes": "Curated cyber insurance feed."
     },
     {
+      "name": "Cowbell Cyber Blog",
+      "url": "https://cowbell.insure/feed",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance, cyber risk, SMB security."
+    },
+    {
+      "name": "ProWriters Cyber Insurance Blog",
+      "url": "https://www.prowritersins.com/feed",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Cyber insurance underwriting, claims, ransomware."
+    },
+    {
+      "name": "Insurance Business America",
+      "url": "https://www.insurancebusinessmag.com/us/rss",
+      "category": "aggregated",
+      "authority_tier": 1,
+      "requires_filter": true,
+      "notes": "Insurance industry news - frequent cyber insurance coverage"
+    },
+    {
       "name": "Insurance Journal (cyber search term)",
       "url": "https://www.insurancejournal.com/search/?q=cyber",
       "category": "market",

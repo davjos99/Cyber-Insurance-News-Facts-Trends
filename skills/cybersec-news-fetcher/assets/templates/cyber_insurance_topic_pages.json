@@ -10,6 +10,13 @@
       "notes": "Excellent cyber insurance and risk intelligence."
     },
     {
+      "name": "AC Pubs",
+      "url": "https://acppubs.com/NAT/article/",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Cyber insurance."
+    },
+    {
       "name": "Marsh Cyber Resource Center",
       "url": "https://www.marsh.com/us/services/cyber-risk.html",
       "category": "market",
@@ -87,9 +94,23 @@
       "notes": "Example cyber insurance article page."
     },
     {
+      "name": "Beinsure Cyber Insurance News",
+      "url": "https://beinsure.com/n/cyber-news/",
+      "category": "market",
+      "authority_tier": 2,
+      "notes": "Example cyber insurance article page."
+    },
+    {
       "name": "Munichre.com",
       "url": "https://www.munichre.com/en/insights/cyber/cyber-insurance-risks-and-trends-2026.html",
       "category": "market",
+      "authority_tier": 1,
+      "notes": "Example cyber insurance article page."
+    },
+    {
+      "name": "Munich Re Cyber Insurance",
+      "url": "https://www.munichre.com/en/insights/cyber.html",
+      "category": "reinsurance",
       "authority_tier": 1,
       "notes": "Example cyber insurance article page."
     },
@@ -170,5 +191,152 @@
       "authority_tier": 1,
       "notes": "Relevant cyber insurance article page."
     }
-  ]
+        {
+      "name": "Asia Insurance Review News",
+      "url": "https://www.asiainsurancereview.com/Magazine/ReadMagazineArticle/",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Cyber insurance."
+    },
+    {
+      "name": "Asia Insurance Review News Expert Opinion",
+      "url": "https://insuranceasia.com/insurance/expert-opinion/",
+      "category": "market",
+      "authority_tier": 1,
+      "notes": "Cyber insurance."
+    },
+   {
+    "name": "Insurance Asia News",
+    "url": "https://insuranceasianews.com/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Insurance industry news including cyber insurance."
+  },
+  {
+    "name": "CFO Tech Stories",
+    "url": "https://cfotech.com.au/story/",
+    "category": "technology",
+    "authority_tier": 2,
+    "notes": "Enterprise technology, cybersecurity and risk."
+  },
+  {
+    "name": "ChannelDIVE News",
+    "url": "https://www.channeldive.com/news/",
+    "category": "technology",
+    "authority_tier": 2,
+    "notes": "IT channel, cybersecurity and managed services."
+  },
+  {
+    "name": "Digital Insurance Opinion",
+    "url": "https://www.dig-in.com/opinion/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Insurance technology and cyber insurance commentary."
+  },
+  {
+    "name": "Digital Insurance News",
+    "url": "https://www.dig-in.com/news/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Insurance technology and cyber insurance news."
+  },
+  {
+    "name": "GlobeNewswire News Releases",
+    "url": "https://www.globenewswire.com/news-release/",
+    "category": "press_release",
+    "authority_tier": 3,
+    "notes": "Company press releases including cyber insurance announcements."
+  },
+  {
+    "name": "Insurance Day",
+    "url": "https://www.insuranceday.com/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Global commercial insurance and reinsurance news."
+  },
+  {
+    "name": "Insurance Edge",
+    "url": "https://insurance-edge.net/",
+    "category": "market",
+    "authority_tier": 2,
+    "notes": "Insurance innovation, insurtech and cyber insurance."
+  },
+  {
+    "name": "Insurance Business Australia Cyber",
+    "url": "https://www.insurancebusinessmag.com/au/news/cyber/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Australian cyber insurance news."
+  },
+  {
+    "name": "Insurance Business UK Cyber",
+    "url": "https://www.insurancebusinessmag.com/uk/news/cyber/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "UK cyber insurance news."
+  },
+  {
+    "name": "Insurance Business US Cyber",
+    "url": "https://www.insurancebusinessmag.com/us/news/cyber/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "U.S. cyber insurance news."
+  },
+  {
+    "name": "InsuranceNewsNet Articles",
+    "url": "https://insurancenewsnet.com/innarticle/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Insurance industry news including cyber insurance."
+  },
+  {
+    "name": "Insurance Times News",
+    "url": "https://www.insurancetimes.co.uk/news/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "UK insurance industry and cyber insurance news."
+  },
+  {
+    "name": "ITIJ Long Reads",
+    "url": "https://www.itij.com/latest/long-read/",
+    "category": "analysis",
+    "authority_tier": 2,
+    "notes": "Travel and health insurance analysis with occasional cyber risk coverage."
+  },
+  {
+    "name": "JD Supra Legal News",
+    "url": "https://www.jdsupra.com/legalnews/",
+    "category": "legal",
+    "authority_tier": 2,
+    "notes": "Legal analysis including cyber insurance, privacy and breach litigation."
+  },
+  {
+    "name": "Marsh Cyber Risk Insights",
+    "url": "https://www.marsh.com/content/marsh2/en_us/services/cyber-risk/insights/",
+    "category": "research",
+    "authority_tier": 1,
+    "notes": "Cyber insurance, cyber risk and incident response insights."
+  },
+  {
+    "name": "MSSP Alert News",
+    "url": "https://www.msspalert.com/news/",
+    "category": "technology",
+    "authority_tier": 1,
+    "notes": "Managed security services and cybersecurity industry news."
+  },
+  {
+    "name": "The Insurer Cyber Risk News",
+    "url": "https://www.theinsurer.com/cyber-risk/news/",
+    "category": "market",
+    "authority_tier": 1,
+    "notes": "Cyber insurance, reinsurance and cyber risk news."
+  },
+  {
+    "name": "U.S. Naval Institute Proceedings",
+    "url": "https://www.usni.org/magazines/proceedings/",
+    "category": "defense",
+    "authority_tier": 2,
+    "notes": "Defense, cybersecurity and national security analysis."
+  }
+]
 }

@@ -228,9 +228,15 @@
   },
   {
     "name": "Digital Insurance Opinion",
-    "url": "https://www.dig-in.com/opinion/",
+    "url": "https://www.dig-in.com/news/",
     "category": "market",
     "authority_tier": 1,
+    "allow_paths": [
+    "/opinion/how-",
+    "/news/ai-",
+    "/news/cyber-",
+    "/opinion/"
+    ]
     "notes": "Insurance technology and cyber insurance commentary."
   },
   {

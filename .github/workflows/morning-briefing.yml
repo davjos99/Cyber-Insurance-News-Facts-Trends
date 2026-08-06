@@ -1,41 +1,36 @@
 # Rename the workflow to reflect its new focus.
+# This is what you see under "Actions" in GitHub; it doesn't affect behavior,
+# but helps distinguish it from your general cybersec briefing.
 name: Morning Cyber Insurance Briefing
 
 on:
   schedule:
-    # 7:30 AM UTC daily — GitHub cron uses UTC and does not adjust for DST.
+    # 7:30 AM UTC daily — still fine, or adjust if you want a different time
+    # for the insurance-focused briefing.
     - cron: "30 7 * * *"
-  workflow_dispatch:
+  workflow_dispatch:  # allow manual trigger from the Actions tab
 
 permissions:
+  # This stays the same: you need write access to contents to commit
+  # the generated briefing files back into the repo.
   contents: write
 
 jobs:
+  # Job name can stay the same or be changed for clarity, e.g. build-insurance-briefing.
   build-briefing:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
+        # Standard checkout of the repo contents so the scripts and skills are available.
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
+        # Keep Python 3.11 unless your scripts require a different version.
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Run the chain
-        env:
-          # Optional — only set if you're using Notion publisher.
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-
-          # Optional — only set if you're using WordPress publisher.
-          WP_URL: ${{ secrets.WP_URL }}
-          WP_USER: ${{ secrets.WP_USER }}
-          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
-
         run: |
           mkdir -p output
 
@@ -45,62 +40,49 @@ jobs:
             --since 24 \
             --output output/raw_news.json
 
-          echo "=== Fetching HTML topic pages ==="
-          python skills/cybersec-news-fetcher/scripts/fetch_topic_pages.py \
-            --sources skills/cybersec-news-fetcher/assets/templates/cyber_insurance_topic_pages.json \
-            --output output/topic_items.json
-
-          echo "=== Showing topic-page output summary ==="
-          python -c "import json; p='output/topic_items.json'; d=json.load(open(p, encoding='utf-8')); print('Topic sources polled:', d.get('sources_polled')); print('Topic items found:', len(d.get('items', []))); print('Topic failures:', d.get('sources_failed', []))"
-
-          echo "=== Merging RSS and topic-page items ==="
-          python skills/cybersec-news-fetcher/scripts/merge_items.py \
-            --feeds output/raw_news.json \
-            --topics output/topic_items.json \
-            --output output/raw_all.json
-
-          echo "=== Deduplicating merged items ==="
+          echo "=== Deduplicating news ==="
           python skills/cybersec-news-fetcher/scripts/dedupe.py \
-            --input output/raw_all.json \
+            --input output/raw_news.json \
             --output output/deduped.json
 
-          echo "=== Categorizing briefing ==="
+          echo "=== Categorizing news ==="
           python skills/news-categorizer/scripts/categorize.py \
             --input output/deduped.json \
             --output output/briefing.md
-
-          echo "=== Validating briefing ==="
-          python skills/news-categorizer/scripts/validate_briefing.py output/briefing.md || true
 
           echo "=== Publishing HTML ==="
           python skills/news-page-publisher/scripts/publish_static_html.py \
             --input output/briefing.md \
             --output output/index.html
-
       - name: Commit briefing
+
         run: |
-          git config user.name "Cybersec Briefing Bot"
+          # You can optionally change the bot identity to reflect insurance focus,
+          # e.g., "Cyber Insurance Briefing Bot".
+          git config user.name "Cyber Insurance Briefing Bot"
           git config user.email "bot@users.noreply.github.com"
-
-          echo "=== Synchronizing with the remote main branch ==="
-          git pull --rebase origin main
-
           DATE=$(date +%Y-%m-%d)
 
+          # Folder structure can remain: each date gets its own .md and .html
+          # in briefings/, plus the latest index.html at repo root.
           mkdir -p briefings
+          cp output/briefing.md briefings/${DATE}.md
+          cp output/index.html briefings/${DATE}.html
+          cp output/index.html index.html  # latest at repo root
 
-          cp output/briefing.md "briefings/${DATE}.md"
-          cp output/index.html "briefings/${DATE}.html"
-          cp output/index.html index.html
-
+          # Commit and push the new briefing; if nothing changed,
+          # the commit step will no-op.
           git add briefings/ index.html
-
           git commit -m "Cyber insurance briefing for ${DATE}" || echo "Nothing to commit"
+          git push
 
-          git push origin main
-
-      - name: Upload artifact for download
+      - name: Upload artifact (for download)
+        # This remains correct: it uploads the contents of output/ as a workflow artifact
+        # so you can download the generated files from the Actions run page.
         uses: actions/upload-artifact@v4
         with:
-          name: briefing-${{ github.run_number }}
+          # Artifact name is tied to the run number; you could rename it to make the
+          # insurance focus clear, e.g. "cyber-insurance-briefing-${{ github.run_number }}".
+          name: cyber-insurance-briefing-${{ github.run_number }}
           path: output/
+

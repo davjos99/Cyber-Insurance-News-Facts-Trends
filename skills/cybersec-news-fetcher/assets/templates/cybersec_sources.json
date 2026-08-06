@@ -3,178 +3,25 @@
   "updated": "2026-07-28",
   "sources": [
     {
-      "name": "RSS.app Cyber Insurance Feed",
-      "url": "https://rss.app/r/feed/t8AGNvHfvc3bx5Hi",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Curated cyber insurance feed."
-    },
-    {
-      "name": "Hunton Privacy and Security Law Blog",
-      "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/?rss",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Curated cyber insurance feed."
-    },
-    {
-      "name": "Privacy World Blog",
-      "url": "https://www.privacyworld.blog/feed/",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Laws on data privacy, security and innovation."
-    },
-    {
-      "name": "DataBreaches.net",
-      "url": "https://databreaches.net/feed/",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": false,
-      "notes": "Data Breach News."
-    },
-    {
-      "name": "Property Casualty 360",
-      "url": "https://www.propertycasualty360.com",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance feed."
-    },
-    {
-      "name": "Carrier Management",
-      "url": "https://www.carriermanagement.com",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance feed."
-    },
-    {
-      "name": "Reinsurance NE",
-      "url": "https://www.reinsurancene.ws",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance feed."
-    },
-    {
-      "name": "Claims Journal",
-      "url": "https://www.claimsjournal.com",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance feed."
-    },
-    {
-      "name": "Risk and Insurance",
-      "url": "https://riskandinsurance.com",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance feed."
-    },
-    {
-      "name": "Business Insurance",
-      "url": "https://www.businessinsurance.com",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance feed."
-    },
-    {
-      "name": "At-Bay Blog",
-      "url": "https://www.at-bay.com/blog/feed/",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance, ransomware, claims."
-    },
-    {
-      "name": "Coalition Blog",
-      "url": "https://blog.coalitioninc.com/rss.xml",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance and active cyber risk."
-    },
-    {
-      "name": "Data Breach Insurance Quote Blog",
-      "url": "https://databreachinsurancequote.com/feed",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance & data breach coverage."
-    },
-    {
-      "name": "Cowbell Cyber Blog",
-      "url": "https://cowbell.insure/feed",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance, cyber risk, SMB security."
-    },
-    {
-      "name": "ProWriters Cyber Insurance Blog",
-      "url": "https://www.prowritersins.com/feed",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Cyber insurance underwriting, claims, ransomware."
-    },
-    {
-      "name": "Insurance Business America",
-      "url": "https://www.insurancebusinessmag.com/us/rss",
-      "category": "aggregated",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Insurance industry news - frequent cyber insurance coverage"
-    },
-    {
-      "name": "Insurance Journal - cyber",
-      "url": "https://www.insurancejournal.com/search/?q=cyber",
-      "category": "market",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Broad insurance feed; filtered by cyber keyword."
-    },
-    {
       "name": "Insurance Business US",
       "url": "https://www.insurancebusinessmag.com/us/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
+      "requires_filter": true
     },
     {
       "name": "Insurance Business UK",
       "url": "https://www.insurancebusinessmag.com/uk/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
+      "requires_filter": true
     },
     {
       "name": "Canadian Underwriter Cyber",
       "url": "https://www.canadianunderwriter.ca/global-category/cyber/feed/",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": true
-    },
-    {
-      "name": "Canadian Underwriter Cyber",
-      "url": "https://www.canadianunderwriter.ca/cyber/feed/",
-      "category": "market",
-      "authority_tier": 1,
-      "requires_filter": true
-    },
-    {
-      "name": "Asia Insurance Review RSS",
-      "url": "https://www.asiainsurancereview.com/rss",
-      "category": "market",
-      "authority_tier": 1,
-      "requires_filter": true,
-      "notes": "Broad insurance feed; filter to keep cyber insurance items only."
+      "requires_filter": false
     }
   ]
 }

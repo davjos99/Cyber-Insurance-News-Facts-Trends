@@ -37,7 +37,7 @@ jobs:
           echo "=== Fetching RSS/Atom feeds ==="
           python skills/cybersec-news-fetcher/scripts/fetch_feeds.py \
             --sources skills/cybersec-news-fetcher/assets/templates/cybersec_sources.json \
-            --since 24 \
+            --since 168 \
             --output output/raw_news.json
 
           echo "=== Deduplicating news ==="
@@ -85,4 +85,6 @@ jobs:
           # insurance focus clear, e.g. "cyber-insurance-briefing-${{ github.run_number }}".
           name: cyber-insurance-briefing-${{ github.run_number }}
           path: output/
+
+
 

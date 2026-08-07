@@ -190,7 +190,7 @@
       "category": "market",
       "authority_tier": 1,
       "notes": "Relevant cyber insurance article page."
-    }
+    },
         {
       "name": "Asia Insurance Review News",
       "url": "https://www.asiainsurancereview.com/Magazine/ReadMagazineArticle/",
@@ -236,7 +236,7 @@
     "/news/ai-",
     "/news/cyber-",
     "/opinion/"
-    ]
+    ],
     "notes": "Insurance technology and cyber insurance commentary."
   },
   {

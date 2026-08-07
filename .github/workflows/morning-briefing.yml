@@ -34,15 +34,26 @@ jobs:
         run: |
           mkdir -p output
 
-          echo "=== Fetching RSS/Atom feeds ==="
+          echo "=== Fetching RSS feeds ==="
           python skills/cybersec-news-fetcher/scripts/fetch_feeds.py \
             --sources skills/cybersec-news-fetcher/assets/templates/cybersec_sources.json \
             --since 168 \
             --output output/raw_news.json
 
-          echo "=== Deduplicating news ==="
+          echo "=== Fetching cyber-insurance topic pages ==="
+          python skills/cybersec-news-fetcher/scripts/fetch_topic_pages.py \
+            --sources skills/cybersec-news-fetcher/assets/templates/cyber_insurance_topic_pages.json \
+            --output output/topic_items.json
+
+          echo "=== Merging RSS and topic-page items ==="
+          python skills/cybersec-news-fetcher/scripts/merge_items.py \
+            --feeds output/raw_news.json \
+            --topics output/topic_items.json \
+            --output output/raw_all.json
+
+          echo "=== Deduplicating merged items ==="
           python skills/cybersec-news-fetcher/scripts/dedupe.py \
-            --input output/raw_news.json \
+            --input output/raw_all.json \
             --output output/deduped.json
 
           echo "=== Categorizing news ==="

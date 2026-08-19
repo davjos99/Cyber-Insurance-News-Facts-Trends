@@ -40,22 +40,6 @@ jobs:
             --since 168 \
             --output output/raw_news.json
 
-          echo "=== Fetching cyber-insurance topic pages ==="
-          python skills/cybersec-news-fetcher/scripts/fetch_topic_pages.py \
-            --sources skills/cybersec-news-fetcher/assets/templates/cyber_insurance_topic_pages.json \
-            --output output/topic_items.json
-
-          echo "=== Merging RSS and topic-page items ==="
-          python skills/cybersec-news-fetcher/scripts/merge_items.py \
-            --feeds output/raw_news.json \
-            --topics output/topic_items.json \
-            --output output/raw_all.json
-
-          echo "=== Deduplicating merged items ==="
-          python skills/cybersec-news-fetcher/scripts/dedupe.py \
-            --input output/raw_all.json \
-            --output output/deduped.json
-
           echo "=== Categorizing news ==="
           python skills/news-categorizer/scripts/categorize.py \
             --input output/deduped.json \

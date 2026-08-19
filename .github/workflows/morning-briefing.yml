@@ -40,6 +40,11 @@ jobs:
             --since 168 \
             --output output/raw_news.json
 
+          echo "=== Deduplicating RSS items ==="
+          python skills/cybersec-news-fetcher/scripts/dedupe.py \
+            --input output/raw_news.json \
+            --output output/deduped.json
+
           echo "=== Categorizing news ==="
           python skills/news-categorizer/scripts/categorize.py \
             --input output/deduped.json \

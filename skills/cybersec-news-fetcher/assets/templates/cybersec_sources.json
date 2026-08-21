@@ -17,11 +17,18 @@
       "requires_filter": true
     },
     {
-      "name": "Canadian Underwriter Cyber",
-      "url": "https://www.canadianunderwriter.ca/global-category/cyber/feed/",
+      "name": "Insurance Business Australia",
+      "url": "https://www.insurancebusinessmag.com/au/rss",
       "category": "market",
       "authority_tier": 1,
-      "requires_filter": false
+      "requires_filter": true
+    },
+    {
+      "name": "Insurance Business Canada",
+      "url": "https://www.insurancebusinessmag.com/ca/rss",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true
     }
   ]
 }

@@ -5,7 +5,7 @@ validate_briefing.py — sanity-check a generated briefing.md against the rules.
 Exit 0 = pass, exit 1 = fail.
 
 Checks:
-  1. Three section headers exist: "## Threats", "## News", "## Advice"
+  1. The News section exists: "## News"
   2. Each section has 3-5 items OR an explicit "No material items today" line
   3. Every item has a source URL: [Source: ...](http...)
   4. No hard-banned adjectives: critical, concerning, groundbreaking, etc.
@@ -20,7 +20,7 @@ import re
 import sys
 from pathlib import Path
 
-REQUIRED_SECTIONS = ["Threats", "News", "Advice"]
+REQUIRED_SECTIONS = ["News"]
 
 BANNED_PHRASES = [
     "critical",  # CVSS 9.x → use the number; "critical infrastructure" gets a pass below

@@ -1,18 +1,10 @@
-# Cybersec Briefing — {DATE}
+# Cyber Insurance News — {DATE}
 
 _Window: last {WINDOW_HOURS} hours · {SOURCES_POLLED} sources polled · {ITEMS_REVIEWED} items reviewed · {ITEMS_KEPT} kept_
-
-## Threats
-
-{THREATS_ITEMS}
 
 ## News
 
 {NEWS_ITEMS}
-
-## Advice
-
-{ADVICE_ITEMS}
 
 ---
 

@@ -196,22 +196,21 @@ def render_item(item: dict) -> str:
 
 def build_briefing(data: dict, template_text: str) -> str:
     items = data.get("items", [])
-    buckets: dict[str, list[dict]] = {"Threats": [], "News": [], "Advice": []}
+    buckets: dict[str, list[dict]] = {"News": []}
     dropped = 0
+
     for it in items:
-        cat = categorize_item(it)
-        if cat is None:
+        if categorize_item(it) is None:
             dropped += 1
             continue
-        buckets[cat].append(it)
+        buckets["News"].append(it)
 
-    # Rank + cap at 5
-    for bucket in buckets:
-        buckets[bucket] = rank_within_bucket(buckets[bucket], bucket)[:5]
+    # Keep up to 7 relevant cyber-insurance news items
+    buckets["News"] = rank_within_bucket(buckets["News"], "News")[:7]
 
-    log(f"Categorized: Threats={len(buckets['Threats'])} News={len(buckets['News'])} Advice={len(buckets['Advice'])} Dropped={dropped}")
+    log(f"Categorized: News={len(buckets['News'])} Dropped={dropped}")
 
-    items_kept = sum(len(v) for v in buckets.values())
+    items_kept = len(buckets["News"])    
 
     def render_bucket(items: list[dict], bucket_name: str) -> str:
         if not items:
@@ -239,9 +238,7 @@ def build_briefing(data: dict, template_text: str) -> str:
         "{SOURCES_POLLED}": str(data.get("sources_polled", 0)),
         "{ITEMS_REVIEWED}": str(data.get("items_after_dedupe", data.get("items_after_time_filter", len(items)))),
         "{ITEMS_KEPT}": str(items_kept),
-        "{THREATS_ITEMS}": render_bucket(buckets["Threats"], "Threats"),
         "{NEWS_ITEMS}": render_bucket(buckets["News"], "News"),
-        "{ADVICE_ITEMS}": render_bucket(buckets["Advice"], "Advice"),
         "{TIMESTAMP}": gen_at.strftime("%Y-%m-%dT%H:%M:%S"),
         "{SOURCES_SUCCEEDED}": str(data.get("sources_succeeded", 0)),
         "{FAILED_SOURCES_NOTE}": failed_note,

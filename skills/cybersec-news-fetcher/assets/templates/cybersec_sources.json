@@ -29,6 +29,13 @@
       "category": "market",
       "authority_tier": 1,
       "requires_filter": true
+    },
+    {
+      "name": "Insurance Journal",
+      "url": "https://www.insurancejournal.com/feed/",
+      "category": "market",
+      "authority_tier": 1,
+      "requires_filter": true
     }
   ]
 }

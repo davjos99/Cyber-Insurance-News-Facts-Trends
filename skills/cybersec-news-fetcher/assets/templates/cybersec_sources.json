@@ -32,7 +32,7 @@
     },
     {
       "name": "Insurance Journal",
-      "url": "https://www.insurancejournal.com/feed/",
+      "url": "https://www.insurancejournal.com/rss/news",
       "category": "market",
       "authority_tier": 1,
       "requires_filter": true

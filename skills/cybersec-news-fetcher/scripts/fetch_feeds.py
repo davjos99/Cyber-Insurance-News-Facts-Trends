@@ -123,13 +123,18 @@ def is_cyber_insurance(item: dict) -> bool:
 
     # Insurance + cyber must be present
     insurance_terms = [
-        "insurance", "insurer", "underwriting", "policy", "premiums",
-        "broker", "carrier", "coverage", "liability", "exclusion",
-        "capacity", "loss ratio", "reinsurance"
+        "insurance", "insurer", "insured", "underwriter", "underwriting",
+        "policy", "premium", "premiums", "broker", "carrier", "coverage",
+        "liability", "cyber liability", "exclusion", "war exclusion",
+        "capacity", "loss ratio", "reinsurance", "risk transfer",
+        "claim", "claims"
     ]
 
     cyber_terms = [
-        "cyber", "ransomware", "data breach", "privacy", "spyware", "malware",
+        "cyber", "cybersecurity", "cyber risk", "cybersecurity risk",
+        "ransomware", "data breach", "data security", "data protection",
+        "privacy", "network security", "digital risk", "cyberattack",
+        "cyber attack", "cyber war", "spyware", "malware",
         "incident response"
     ]
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersec Insurance News-Facts-Trends</title>
+  <style>
+    :root {
+      --bg-dark: #0c0c0e;
+      --bg-card: #15151a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a8a8b0;
+      --accent-cyan: #5adcf0;
+      --accent-yellow: #ffd54f;
+      --accent-green: #82e682;
+      --accent-red: #ff7a7a;
+      --border: #2a2a32;
+    }
+    [data-theme="light"] {
+      --bg-dark: #fafafa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --accent-cyan: #0091ad;
+      --accent-yellow: #b8860b;
+      --accent-green: #228822;
+      --accent-red: #c0392b;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
+    }
+    .container { max-width: 880px; margin: 0 auto; }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .toggle {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+    .toggle:hover { border-color: var(--accent-cyan); }
+    section {
+      background: var(--bg-card);
+      border-left: 4px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    section.threats { border-left-color: var(--accent-red); }
+    section.news { border-left-color: var(--accent-cyan); }
+    section.advice { border-left-color: var(--accent-green); }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    section.threats h2 { color: var(--accent-red); }
+    section.news h2 { color: var(--accent-cyan); }
+    section.advice h2 { color: var(--accent-green); }
+    ul { list-style: none; padding: 0; }
+    li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: none; }
+    li strong {
+      color: var(--text-primary);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    li a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    li a:hover { text-decoration: underline; }
+    li p { color: var(--text-secondary); font-size: 0.95rem; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .no-items {
+      color: var(--text-secondary);
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      h1 { font-size: 1.5rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Cybersec Insurance News-Facts-Trends</h1>
+        <div class="meta">Window: last 168 hours &middot; 5 sources polled &middot; 7 items kept</div>
+      </div>
+      <button class="toggle" onclick="toggleTheme()">Light / Dark</button>
+    </header>
+
+    <section class="threats">
+      <h2>Threats</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <section class="news">
+      <h2>News</h2>
+      <ul><li><strong>A rogue AI agent could hack your company, and some cyber policies may not cover it</strong><p>BOXX’s Erik Tifft says insurers are now pricing for the chance that one rogue AI agent hits many policyholders at once, something they weren’t modelling five to ten years ago <a href="https://www.insurancebusinessmag.com/ca/news/cyber/a-rogue-ai-agent-could-hack-your-company-and-some-cyber-policies-may-not-cover-it-593044.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Canada</a></p></li><li><strong>POLL: Have your say - should cyber insurance wordings be standardised?</strong><p>Should cyber insurers align core wordings or keep competing on cover? Cast your vote and see where the poll stands <a href="https://www.insurancebusinessmag.com/uk/news/cyber/poll-have-your-say--should-cyber-insurance-wordings-be-standardised-592982.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business UK</a></p></li><li><strong>Australian and NZ firms’ OT cyber losses average $2m per incident, Claroty finds</strong><p>Operational technology attacks cost ANZ organisations almost double the global average, raising questions about cyber insurance adequacy <a href="https://www.insurancebusinessmag.com/au/news/cyber/australian-and-nz-firms-ot-cyber-losses-average-2m-per-incident-claroty-finds-592978.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Australia</a></p></li><li><strong>Arizona courts breach raises questions for state's cyber self-insurance fund</strong><p>A phishing attack exposed data on 1.3 million people, but whether the court system falls within Arizona's cyber self-insurance has not been disclosed <a href="https://www.insurancebusinessmag.com/us/news/cyber/arizona-courts-breach-raises-questions-for-states-cyber-selfinsurance-fund-592746.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>ASOS confirms cyber cover mid-breach as vendor gap questions mount</strong><p>When a breach crosses multiple vendor environments, how a cyber policy defines “computer system” determines what is actually covered <a href="https://www.insurancebusinessmag.com/au/news/cyber/asos-confirms-cyber-cover-midbreach-as-vendor-gap-questions-mount-592700.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Australia</a></p></li><li><strong>Ransomware gang targets FlyDubai - and says it has Boeing's code</strong><p>The same gang that disrupted European airports is now claiming Boeing's proprietary source code, raising questions for cyber and tech E&amp;O <a href="https://www.insurancebusinessmag.com/us/news/cyber/ransomware-gang-targets-flydubai--and-says-it-has-boeings-code-592696.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>ASOS cites cyber cover as hackers take breach straight to customers</strong><p>Hackers used the retailer's own app to take the onslaught straight to customers, and its insurance disclosure has raised questions of its own <a href="https://www.insurancebusinessmag.com/uk/news/cyber/asos-cites-cyber-cover-as-hackers-take-breach-straight-to-customers-592702.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business UK</a></p></li></ul>
+    </section>
+
+    <section class="advice">
+      <h2>Advice</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <footer>
+      Generated 2026-10-11T14:14:18 UTC
+      
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("cybersec-briefing-theme", next);
+    }
+    (function() {
+      const saved = localStorage.getItem("cybersec-briefing-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</body>
+</html>

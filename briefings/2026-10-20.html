@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersec Insurance News-Facts-Trends</title>
+  <style>
+    :root {
+      --bg-dark: #0c0c0e;
+      --bg-card: #15151a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a8a8b0;
+      --accent-cyan: #5adcf0;
+      --accent-yellow: #ffd54f;
+      --accent-green: #82e682;
+      --accent-red: #ff7a7a;
+      --border: #2a2a32;
+    }
+    [data-theme="light"] {
+      --bg-dark: #fafafa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --accent-cyan: #0091ad;
+      --accent-yellow: #b8860b;
+      --accent-green: #228822;
+      --accent-red: #c0392b;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
+    }
+    .container { max-width: 880px; margin: 0 auto; }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .toggle {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+    .toggle:hover { border-color: var(--accent-cyan); }
+    section {
+      background: var(--bg-card);
+      border-left: 4px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    section.threats { border-left-color: var(--accent-red); }
+    section.news { border-left-color: var(--accent-cyan); }
+    section.advice { border-left-color: var(--accent-green); }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    section.threats h2 { color: var(--accent-red); }
+    section.news h2 { color: var(--accent-cyan); }
+    section.advice h2 { color: var(--accent-green); }
+    ul { list-style: none; padding: 0; }
+    li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: none; }
+    li strong {
+      color: var(--text-primary);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    li a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    li a:hover { text-decoration: underline; }
+    li p { color: var(--text-secondary); font-size: 0.95rem; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .no-items {
+      color: var(--text-secondary);
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      h1 { font-size: 1.5rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Cybersec Insurance News-Facts-Trends</h1>
+        <div class="meta">Window: last 168 hours &middot; 5 sources polled &middot; 7 items kept</div>
+      </div>
+      <button class="toggle" onclick="toggleTheme()">Light / Dark</button>
+    </header>
+
+    <section class="threats">
+      <h2>Threats</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <section class="news">
+      <h2>News</h2>
+      <ul><li><strong>Lockton warns of physical loss exclusions after French supermarket cyberattack</strong><p>Refrigeration failures caused €270,000 in stock losses at two stores <a href="https://www.insurancebusinessmag.com/au/news/cyber/lockton-warns-of-physical-loss-exclusions-after-french-supermarket-cyberattack-594107.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Australia</a></p></li><li><strong>Why captive insurance for cyber and trade credit is growing</strong><p>Commercial gaps and coverage limits are pushing organisations into captive structures for both lines <a href="https://www.insurancebusinessmag.com/us/news/risk-management/why-captive-insurance-for-cyber-and-trade-credit-is-growing-594098.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>When someone else’s outage becomes your claim</strong><p>Cyber business interruption goes downstream <a href="https://www.insurancebusinessmag.com/us/news/cyber/when-someone-elses-outage-becomes-your-claim-594080.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>Brit cyber cover now available through Acturis package placements</strong><p>The integration puts cyber alongside commercial lines renewals, giving brokers a prompt to raise cover earlier in the sales process <a href="https://www.insurancebusinessmag.com/uk/news/cyber/brit-cyber-cover-now-available-through-acturis-package-placements-594041.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business UK</a></p></li><li><strong>Brokers are using AI but many brokerages haven't written the rules yet</strong><p>Australian data suggests staff are adopting AI faster than their firms and a Privacy Act change in December may force principals to act <a href="https://www.insurancebusinessmag.com/au/news/technology/brokers-are-using-ai-but-many-brokerages-havent-written-the-rules-yet-594039.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Australia</a></p></li><li><strong>G7 to war-game AI cyberattacks on banks as regulators sound systemic alarm</strong><p>Finance ministers sign off on frontier AI &quot;tabletop&quot; drills, and the scenarios they plan to rehearse look a lot like the cyber catastrophes insurers have spent years modeling <a href="https://www.insurancebusinessmag.com/us/news/cyber/g7-to-wargame-ai-cyberattacks-on-banks-as-regulators-sound-systemic-alarm-593896.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>French fridges hacked, food destroyed - and the cyber policies almost certainly won't pay</strong><p>The incident impacting 350 supermarkets reveals a coverage gap that applies to any UK retailer using connected operational technology <a href="https://www.insurancebusinessmag.com/uk/news/cyber/french-fridges-hacked-food-destroyed--and-the-cyber-policies-almost-certainly-wont-pay-593813.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business UK</a></p></li></ul>
+    </section>
+
+    <section class="advice">
+      <h2>Advice</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <footer>
+      Generated 2026-10-20T12:49:35 UTC
+      <br><em>Sources that failed this run: Insurance Journal</em>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("cybersec-briefing-theme", next);
+    }
+    (function() {
+      const saved = localStorage.getItem("cybersec-briefing-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</body>
+</html>

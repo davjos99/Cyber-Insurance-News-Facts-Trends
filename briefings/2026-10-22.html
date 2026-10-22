@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersec Insurance News-Facts-Trends</title>
+  <style>
+    :root {
+      --bg-dark: #0c0c0e;
+      --bg-card: #15151a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a8a8b0;
+      --accent-cyan: #5adcf0;
+      --accent-yellow: #ffd54f;
+      --accent-green: #82e682;
+      --accent-red: #ff7a7a;
+      --border: #2a2a32;
+    }
+    [data-theme="light"] {
+      --bg-dark: #fafafa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --accent-cyan: #0091ad;
+      --accent-yellow: #b8860b;
+      --accent-green: #228822;
+      --accent-red: #c0392b;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
+    }
+    .container { max-width: 880px; margin: 0 auto; }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .toggle {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+    .toggle:hover { border-color: var(--accent-cyan); }
+    section {
+      background: var(--bg-card);
+      border-left: 4px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    section.threats { border-left-color: var(--accent-red); }
+    section.news { border-left-color: var(--accent-cyan); }
+    section.advice { border-left-color: var(--accent-green); }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    section.threats h2 { color: var(--accent-red); }
+    section.news h2 { color: var(--accent-cyan); }
+    section.advice h2 { color: var(--accent-green); }
+    ul { list-style: none; padding: 0; }
+    li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: none; }
+    li strong {
+      color: var(--text-primary);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    li a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    li a:hover { text-decoration: underline; }
+    li p { color: var(--text-secondary); font-size: 0.95rem; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .no-items {
+      color: var(--text-secondary);
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      h1 { font-size: 1.5rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Cybersec Insurance News-Facts-Trends</h1>
+        <div class="meta">Window: last 168 hours &middot; 5 sources polled &middot; 7 items kept</div>
+      </div>
+      <button class="toggle" onclick="toggleTheme()">Light / Dark</button>
+    </header>
+
+    <section class="threats">
+      <h2>Threats</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <section class="news">
+      <h2>News</h2>
+      <ul><li><strong>Cyber insurance market is 'very unhealthy'</strong><p>Rate issues are taking their toll <a href="https://www.insurancebusinessmag.com/us/tv/cyber-insurance-market-is-very-unhealthy-594543.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>The Cost of Losing Your Cool: Tallying the Losses of a Supermarket Cyberattack</strong><p>Insurance and Financial Implications of France‘s Supermarket Refrigeration Cyberattack Keeping things cool is generally a good idea in the supermarket business. <a href="https://www.insurancejournal.com/news/national/2026/10/22/889881.htm" rel="noopener noreferrer" target="_blank">Source: Insurance Journal</a></p></li><li><strong>SMEs rank cyber their top risk but misread the threats: CFC</strong><p>Most small businesses don’t know cyber insurance covers human error or provides incident response, CFC finds <a href="https://www.insurancebusinessmag.com/us/news/cyber/smes-rank-cyber-their-top-risk-but-misread-the-threats-cfc-594506.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>Meta ordered to pay $25 billion privacy penalty</strong><p>Per-violation math meets Big Tech, and the bill runs to 11 figures as case raises some important liability issues <a href="https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/meta-ordered-to-pay-25-billion-privacy-penalty-594465.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>New Mexico wallops Meta with a fine bigger than the GDP of many countries</strong><p>Facebook privacy penalty was calculated per person who could have seen a misleading statement. Canadian insurers with clients selling into the US should look closely at how it was built <a href="https://www.insurancebusinessmag.com/ca/news/professional-liability/new-mexico-wallops-meta-with-a-fine-bigger-than-the-gdp-of-many-countries-594466.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Canada</a></p></li><li><strong>NSA warns of critical website flaw as Wikipedia, European government websites taken offline</strong><p>Emergency fixes are out for two bugs in crucial software that runs around 70% of the web. For cyber insurers, it’s the scenario they fear most: one flaw that could hit thousands of policyholders at once <a href="https://www.insurancebusinessmag.com/us/news/cyber/nsa-warns-of-critical-website-flaw-as-wikipedia-european-government-websites-taken-offline-594432.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>Business email compromise dominates SME cyber claims</strong><p>Scammers in the inbox, healthcare still #1 - what Emergence's 2026 claims data means for brokers <a href="https://www.insurancebusinessmag.com/au/news/cyber/business-email-compromise-dominates-sme-cyber-claims-593742.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Australia</a></p></li></ul>
+    </section>
+
+    <section class="advice">
+      <h2>Advice</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <footer>
+      Generated 2026-10-22T13:03:33 UTC
+      
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("cybersec-briefing-theme", next);
+    }
+    (function() {
+      const saved = localStorage.getItem("cybersec-briefing-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</body>
+</html>

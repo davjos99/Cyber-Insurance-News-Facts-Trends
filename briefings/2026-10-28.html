@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersec Insurance News-Facts-Trends</title>
+  <style>
+    :root {
+      --bg-dark: #0c0c0e;
+      --bg-card: #15151a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a8a8b0;
+      --accent-cyan: #5adcf0;
+      --accent-yellow: #ffd54f;
+      --accent-green: #82e682;
+      --accent-red: #ff7a7a;
+      --border: #2a2a32;
+    }
+    [data-theme="light"] {
+      --bg-dark: #fafafa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --accent-cyan: #0091ad;
+      --accent-yellow: #b8860b;
+      --accent-green: #228822;
+      --accent-red: #c0392b;
+      --border: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
+    }
+    .container { max-width: 880px; margin: 0 auto; }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .toggle {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+    .toggle:hover { border-color: var(--accent-cyan); }
+    section {
+      background: var(--bg-card);
+      border-left: 4px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    section.threats { border-left-color: var(--accent-red); }
+    section.news { border-left-color: var(--accent-cyan); }
+    section.advice { border-left-color: var(--accent-green); }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    section.threats h2 { color: var(--accent-red); }
+    section.news h2 { color: var(--accent-cyan); }
+    section.advice h2 { color: var(--accent-green); }
+    ul { list-style: none; padding: 0; }
+    li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: none; }
+    li strong {
+      color: var(--text-primary);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    li a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    li a:hover { text-decoration: underline; }
+    li p { color: var(--text-secondary); font-size: 0.95rem; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .no-items {
+      color: var(--text-secondary);
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      h1 { font-size: 1.5rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Cybersec Insurance News-Facts-Trends</h1>
+        <div class="meta">Window: last 168 hours &middot; 5 sources polled &middot; 7 items kept</div>
+      </div>
+      <button class="toggle" onclick="toggleTheme()">Light / Dark</button>
+    </header>
+
+    <section class="threats">
+      <h2>Threats</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <section class="news">
+      <h2>News</h2>
+      <ul><li><strong>Brokerages are now cyber targets too, Definity’s MacDonald warns</strong><p>Meta privacy penalty shows how fast per-client risk can add up <a href="https://www.insurancebusinessmag.com/ca/news/cyber/brokerages-are-now-cyber-targets-too-definitys-macdonald-warns-595156.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Canada</a></p></li><li><strong>The San Francisco MGA shopping London for AI agent capacity</strong><p>Fresh from a $10m seed round, Harbor's Daniel Elechiguerra says AI agent risk doesn't belong in cyber, and he wants London to back him <a href="https://www.insurancebusinessmag.com/uk/news/breaking-news/the-san-francisco-mga-shopping-london-for-ai-agent-capacity-595246.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business UK</a></p></li><li><strong>PwC Confirms Cybersecurity Incident Involving Employee Learning Records</strong><p>PwC on Oct. 23 said it was aware of a cybersecurity incident involving a third-party vendor used to host company employee learning records, the day after a cyber extortion group claimed to have stolen 590 gigabytes of company data. A … <a href="https://www.insurancejournal.com/news/national/2026/10/28/890532.htm" rel="noopener noreferrer" target="_blank">Source: Insurance Journal</a></p></li><li><strong>Anthropic’s IPO warning on AI catastrophe risk is “a signal”, says Liberty cyber chief</strong><p>The Claude developer’s prospectus, which includes a public offer in Australia, says its potential risks are bigger than the insurance industry itself <a href="https://www.insurancebusinessmag.com/au/news/cyber/anthropics-ipo-warning-on-ai-catastrophe-risk-is-a-signal-says-liberty-cyber-chief-595170.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business Australia</a></p></li><li><strong>PHP Security Flaws Highlight Potential Systemic Risk Aggregation for Cyber Insurers</strong><p>Recently discovered security flaws in PHP programming language, used by many websites globally, has highlighted the potential for cyber risk aggregation, which has long worried insurers and made them reluctant to aggressively increase their risk appetites, according to the rating. <a href="https://www.insurancejournal.com/news/international/2026/10/27/890438.htm" rel="noopener noreferrer" target="_blank">Source: Insurance Journal</a></p></li><li><strong>The cyber litigation landscape just shifted - and not every broker has noticed</strong><p>Illuminate won its case. The CMIA standard it left behind makes certain breach claims significantly easier to bring <a href="https://www.insurancebusinessmag.com/us/news/cyber/the-cyber-litigation-landscape-just-shifted--and-not-every-broker-has-noticed-595135.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li><li><strong>Wire fraud exposes the gaps between cyber and crime coverage</strong><p>Who transfers the money, where it goes and verification procedures can impact claims, says HUB specialist <a href="https://www.insurancebusinessmag.com/us/news/claims/wire-fraud-exposes-the-gaps-between-cyber-and-crime-coverage-595126.aspx" rel="noopener noreferrer" target="_blank">Source: Insurance Business US</a></p></li></ul>
+    </section>
+
+    <section class="advice">
+      <h2>Advice</h2>
+      <div class="no-items">No material items in the window.</div>
+    </section>
+
+    <footer>
+      Generated 2026-10-28T14:10:47 UTC
+      
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("cybersec-briefing-theme", next);
+    }
+    (function() {
+      const saved = localStorage.getItem("cybersec-briefing-theme");
+      if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+</body>
+</html>
